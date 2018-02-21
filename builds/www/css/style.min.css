@@ -1,1 +1,1 @@
-body{background-color:#0077b3;font-family:Trirong,georgia,times,serif;font-weight:200;font-size:18px}a,body{color:#cod-gray}
+.grid{display:grid;grid-gap:10px;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));grid-auto-rows:60px}h1{font-family:'Roboto Mono',monospace;font-size:18px;color:#2aa2b3}body{font-family:Roboto,sans-serif;font-size:12px;color:rgba(228,237,239,.7)}body{background-color:#162722}a,body{color:#e4edef}.char{border-radius:3px;padding:.5em}

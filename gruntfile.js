@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 					style: 'expanded'
 				},
 				files: [{
-					src: 'src/sass/*.scss',
+					src: 'src/sass/style.scss',
 					dest: 'builds/www/css/style.css'
 				}]
 			}
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
 				options: {
 					hostname: 'localhost',
 					port: 3000,
-					base: 'src',
+					base: 'builds/www/',
 					livereload: true
 				}
 			}
@@ -166,7 +166,16 @@ module.exports = function(grunt) {
 				files: {                                   // Dictionary of files
 					'builds/www/index.html': 'builds/www/test/index.html',     // 'destination': 'source'
 				}
-	    }
+			},
+			dev: {
+				options: {                                 // Target options
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: {                                   // Dictionary of files
+					'builds/www/index.html': 'src/index.html',     // 'destination': 'source'
+				},
+			}
 		}, //htmlmin
 
 		watch: {
@@ -180,7 +189,7 @@ module.exports = function(grunt) {
 				'src/sass/*.scss',
 				'builds/www/css/*.css',
 				'src/index.html'],
-		    tasks: ['jshint', 'concat', 'sass', 'cssmin']
+		    tasks: ['jshint', 'concat', 'sass', 'cssmin', 'htmlmin:dev']
 		  },
 		} //watch
 
@@ -201,8 +210,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('build', ['clean:files', 'responsive_images_extender', 'htmlmin']);
+	grunt.registerTask('build', ['clean:files', 'responsive_images_extender', 'htmlmin:dist']);
 	grunt.registerTask('image', ['clean:contents', 'responsive_images', 'copy', 'imagemin']);
-	grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'jshint', 'connect', 'watch']);
+	grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'cssmin', 'jshint', 'connect', 'watch']);
 
 }; //wrapper function

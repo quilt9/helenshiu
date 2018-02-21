@@ -1,34 +1,41 @@
-/* Colors */
-$fiord: #445566;
-$smaltBlue: #558888;
-$cascade: #88aaaa;
-$dark-blue: #2a00b3;
-$deep-cerulean: #0077b3;
-$bondi-blue: #00b0b3;
-$cyan: #24fbff;
-$heliotrope: #8a7dff;
-$silver-chalice: #a6a6a6;
-$scorpion: #595959;
-$tundora: #444;
-$mine-shaft: #363636;
-$cod-gray: #111;
-$white: #fff;
+@import 'palette';
+@import 'grid';
+
+
+/* Fonts
+=============================================== */
+
+%title-font {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 18px;
+	color: $blue;
+}
+
+%body-font {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	color: rgba( $primary-light, .7 );
+}
+
+h1 {
+	@extend %title-font;
+}
+
 
 /* Body */
 
-
-
-
-
-/* CSS */
 body {
- background-color: $deep-cerulean;
- font-family: 'Trirong', georgia, times, serif;
- font-weight: 200;
- font-size: 18px;
+	background-color: $primary-dark;
+	@extend %body-font;
 }
+
 body, a {
- color: #cod-gray;
+	color: $primary-light;
+}
+
+.char {
+   border-radius: 3px;
+   padding: 0.5em;
 }
 
 

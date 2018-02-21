@@ -1,0 +1,14 @@
+// _grid.scss
+
+/* Variables
+============================================================= */
+$gap-width: 10px;
+$row-height: 60px;
+$column-width: 60px;
+
+.grid {
+   display: grid;
+   grid-gap: $gap-width;
+   grid-template-columns: repeat(auto-fill, minmax($column-width,1fr));
+   grid-auto-rows: $row-height;
+}
