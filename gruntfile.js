@@ -201,7 +201,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('dev', ['clean:files', 'responsive_images_extender', 'htmlmin']);
+	grunt.registerTask('build', ['clean:files', 'responsive_images_extender', 'htmlmin']);
 	grunt.registerTask('image', ['clean:contents', 'responsive_images', 'copy', 'imagemin']);
 	grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'jshint', 'connect', 'watch']);
 
