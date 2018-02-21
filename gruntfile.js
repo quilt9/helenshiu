@@ -1,8 +1,13 @@
+
 module.exports = function(grunt) {
+
 	grunt.initConfig({
 
 		jshint: {
-		    all: ['Gruntfile.js', 'src/scripts/*.js']
+		    all: ['Gruntfile.js', 'src/scripts/*.js'],
+		    options: {
+        jshintrc: '.jshintrc'
+      }
 		 }, //jshint
 
 		sass: {
@@ -77,7 +82,8 @@ module.exports = function(grunt) {
 		}, //imagemin
 
 		clean: {
-			contents: ['builds/www/img/*', 'src/tmp/*']
+			contents: ['builds/www/img/*'],
+			files: ['builds/www/test', 'src/tmp']
 		}, //clean
 
 		copy: {
@@ -92,11 +98,9 @@ module.exports = function(grunt) {
 		responsive_images_extender: {
 			complete: {
 	      options: {
-	        separator: '@',
-	        baseDir: 'builds',
-	        srcAttribute: 'smallest',
+	        baseDir: 'builds/www', 
 	        sizes: [{
-	          selector: '.test_img',
+	          selector: '[alt]',
 	          sizeList: [{
 	            cond: 'max-width: 30em',
 	            size: '100vw'
@@ -111,9 +115,9 @@ module.exports = function(grunt) {
 	      },
 	      files: [{
 	        expand: true,
-	        src: ['**/*.{html,htm,php}'],
-	        cwd: 'src/',
-	        dest: 'builds/'
+	        src: ['index.html'],
+	        cwd: 'builds/www/',
+	        dest: 'builds/www/test/'
 	      }]
 	    }
 		}, //responsive_images_extender
@@ -147,7 +151,7 @@ module.exports = function(grunt) {
 				options: {
 					hostname: 'localhost',
 					port: 3000,
-					base: 'builds/www',
+					base: 'src',
 					livereload: true
 				}
 			}
@@ -160,12 +164,7 @@ module.exports = function(grunt) {
 					collapseWhitespace: true
 				},
 				files: {                                   // Dictionary of files
-					'builds/www/index.html': 'src/index.html',     // 'destination': 'source'
-				}
-	    },
-	    dev: {                                       // Another target
-				files: {                                   // Dictionary of files
-					'builds/www/index.html': 'src/index.html',     // 'destination': 'source'
+					'builds/www/index.html': 'builds/www/test/index.html',     // 'destination': 'source'
 				}
 	    }
 		}, //htmlmin
@@ -181,7 +180,7 @@ module.exports = function(grunt) {
 				'src/sass/*.scss',
 				'builds/www/css/*.css',
 				'src/index.html'],
-		    tasks: ['jshint', 'concat', 'sass', 'cssmin', 'htmlmin']
+		    tasks: ['jshint', 'concat', 'sass', 'cssmin']
 		  },
 		} //watch
 
@@ -202,7 +201,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('image', ['clean', 'responsive_images', 'copy', 'imagemin']);
-	grunt.registerTask('default', ['htmlmin', 'concat', 'sass', 'cssmin', 'jshint', 'connect', 'watch']);
+	grunt.registerTask('dev', ['clean:files', 'responsive_images_extender', 'htmlmin']);
+	grunt.registerTask('image', ['clean:contents', 'responsive_images', 'copy', 'imagemin']);
+	grunt.registerTask('default', ['concat', 'sass', 'cssmin', 'jshint', 'connect', 'watch']);
 
 }; //wrapper function
