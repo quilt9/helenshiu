@@ -90,15 +90,32 @@ module.exports = function(grunt) {
 		}, //copy
 
 		responsive_images_extender: {
-			target: {
-				options: {},
-				files: [{
-				expand: true,
-				src: ['**/*.{html,htm,php}'],
-				cwd: 'src/',
-				dest: 'builds/'
-				}]
-			}
+			complete: {
+	      options: {
+	        separator: '@',
+	        baseDir: 'builds',
+	        srcAttribute: 'smallest',
+	        sizes: [{
+	          selector: '.test_img',
+	          sizeList: [{
+	            cond: 'max-width: 30em',
+	            size: '100vw'
+	          },{
+	            cond: 'max-width: 50em',
+	            size: '50vw'
+	          },{
+	            cond: 'default',
+	            size: 'calc(33vw - 100px)'
+	          }]
+	        }]
+	      },
+	      files: [{
+	        expand: true,
+	        src: ['**/*.{html,htm,php}'],
+	        cwd: 'src/',
+	        dest: 'builds/'
+	      }]
+	    }
 		}, //responsive_images_extender
 
 		concat: {
