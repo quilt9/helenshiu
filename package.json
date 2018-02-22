@@ -9,6 +9,7 @@
   "author": "Helen Shiu hello@helenshiu.com",
   "license": "MIT",
   "devDependencies": {
+    "colors.css": "^3.0.0",
     "grunt": "^1.0.1",
     "grunt-bower-concat": "^1.0.0",
     "grunt-contrib-clean": "^1.1.0",

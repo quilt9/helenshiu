@@ -3,11 +3,13 @@
 
 /* Variables
 ===============================================
-$primary-dark: rgba(22, 39, 34, 1);
-$secondary-dark: rgba(56, 87, 85, 1);
-$blue: rgba(42, 162, 179, 1);
-$primary-light: rgba(228, 237, 239, 1);
-$secondary-light: rgba(200, 195, 185, 1);
+$primary-dark: rgba(0, 0, 0, 1);
+$secondary-dark: rgba(49, 57, 35, 1);
+$primary-blue: rgba(42, 162, 179, 1);
+$secondary-blue: rgba(15, 213, 224, 1);
+$primary-light: rgba(208, 221, 224, 1);
+$secondary-light: rgba(153, 146, 140, 1);
+$white: rgba(255, 255, 255, 1);
 ===============================================
 */
 
@@ -17,17 +19,24 @@ $secondary-light: rgba(200, 195, 185, 1);
 
 %title-font {
 	font-family: 'Roboto Mono', monospace;
-	font-size: 18px;
-	color: $blue;
+	font-size: 21px;
+	color: rgba($secondary-dark, .7);
 }
 
 %body-font {
 	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 	color: rgba( $primary-light, .7 );
 }
 
-h1 {
+%gradient-body {
+	background-oolor: $primary-light;
+	background-image: url(/img/star-bg.svg),linear-gradient(-45deg, $primary-light 0%, $secondary-light 100%);
+	background-repeat: no;
+    background-position: center 0, 0 0, 0 0;
+}
+
+h1, h2, h3, h4 {
 	@extend %title-font;
 }
 
@@ -35,8 +44,10 @@ h1 {
 /* Body */
 
 body {
-	background-color: $primary-dark;
+	@extend %gradient-body;
 	@extend %body-font;
+	margin: 0;
+	padding: 0;
 }
 
 body, a {
@@ -45,7 +56,47 @@ body, a {
 
 .container {
   padding: 0 25px 25px 25px;
+  background: rgba($primary-light, .3);
 }
 
+.title {
+  font-size: 5em;
+  margin-top: 0;
+}
 
+.mono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.f8 {
+  font-size: .78rem;
+}
+
+.cell:hover {
+  background-color: rgba($secondary-dark, .7);
+  color: $primary-blue;
+  transition: all 0.25s ease;
+}
+
+.cell {
+	padding: 25px;
+  transition: all 0.25s ease;
+}
+
+/* media query */
+
+@media (min-width: 1011px) {
+  .title {
+    font-size: 130px;
+    margin-top: 0;
+  }
+
+  .mobile-message {
+    display: none;
+  }
+}
 
