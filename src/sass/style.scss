@@ -1,6 +1,16 @@
 @import 'palette';
 @import 'grid';
 
+/* Variables
+===============================================
+$primary-dark: rgba(22, 39, 34, 1);
+$secondary-dark: rgba(56, 87, 85, 1);
+$blue: rgba(42, 162, 179, 1);
+$primary-light: rgba(228, 237, 239, 1);
+$secondary-light: rgba(200, 195, 185, 1);
+===============================================
+*/
+
 
 /* Fonts
 =============================================== */
@@ -33,9 +43,8 @@ body, a {
 	color: $primary-light;
 }
 
-.char {
-   border-radius: 3px;
-   padding: 0.5em;
+.container {
+  padding: 0 25px 25px 25px;
 }
 
 
