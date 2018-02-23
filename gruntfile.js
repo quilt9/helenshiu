@@ -7,8 +7,8 @@ module.exports = function(grunt) {
 		    all: ['Gruntfile.js', 'src/scripts/*.js'],
 		    options: {
 		    	browser: true,
-        	jshintrc: '.jshintrc'
-      }
+	        jshintrc: '.jshintrc'
+	      }
 		 }, //jshint
 
 		sass: {
@@ -22,6 +22,28 @@ module.exports = function(grunt) {
 				}]
 			}
 		}, //sass
+
+    	postcss: {
+		  options: {
+		    map: true,
+		    processors: [
+		      require('autoprefixer')({browsers: ['last 2 version']})
+		    ]
+		  },
+		  dist: {
+		    src: 'builds/www/css/style.css'
+		  }
+		}, //postcss
+
+		autoprefixer: {
+			options: {
+				browsers: ['last 2 version', 'ie 8', 'ie 9']
+			},
+			single_file: {
+			     src: 'builds/www/css/style.css',
+			     dest: 'builds/www/css/style.css'
+			}
+		}, //autoprefixer
 
 		cssmin: {
 			target: {
@@ -190,7 +212,7 @@ module.exports = function(grunt) {
 				'src/sass/*.scss',
 				'builds/www/css/*.css',
 				'src/index.html'],
-		    tasks: ['jshint', 'concat', 'sass', 'cssmin', 'htmlmin:dev']
+		    tasks: ['jshint', 'concat', 'sass', 'postcss', 'cssmin', 'htmlmin:dev']
 		  },
 		} //watch
 
@@ -209,6 +231,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-wiredep');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('build', ['clean:files', 'responsive_images_extender', 'htmlmin:dist']);
