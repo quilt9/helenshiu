@@ -1,23 +1,24 @@
+/* jshint browser: true */
+
 var myIndex = 0;
 
 function carousel() {
 
-    var i;
-    var x = document.getElementsByClassName("recentSlides");
+  var i;
+  var x = document.getElementsByClassName('mySlides');
 
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
 
-    myIndex++;
+  myIndex++;
 
-    if (myIndex > x.length) {
-    	myIndex = 1;
-    }
+  if (myIndex > x.length) {
+  	myIndex = 1;
+  }
+  x[myIndex-1].style.display = "block";
 
-    x[myIndex-1].style.display = "block";
-
-    setTimeout(carousel, 9000);
+  setTimeout(carousel, 9000);
 }
 
 carousel();

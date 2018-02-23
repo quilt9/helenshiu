@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 		jshint: {
 		    all: ['Gruntfile.js', 'src/scripts/*.js'],
 		    options: {
-        jshintrc: '.jshintrc'
+		    	browser: true,
+        	jshintrc: '.jshintrc'
       }
 		 }, //jshint
 
@@ -27,7 +28,7 @@ module.exports = function(grunt) {
 				files: [{
 				expand: true,
 				cwd: 'builds/www/css',
-				src: ['*.css', '!*.min.css'],
+				src: ['style.css', '!*.min.css'],
 				dest: 'builds/www/css',
 				ext: '.min.css'
 				}]
@@ -82,7 +83,7 @@ module.exports = function(grunt) {
 		}, //imagemin
 
 		clean: {
-			contents: ['builds/www/img/*'],
+			//contents: ['builds/www/img/*'],
 			files: ['builds/www/test', 'src/tmp']
 		}, //clean
 

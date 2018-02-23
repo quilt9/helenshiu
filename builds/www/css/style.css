@@ -244,20 +244,9 @@ body, a {
   color: #d0dde0;
 }
 
-header {
-  position: relative;
-  max-height: 1200px;
-}
-
 img {
   width: 100%;
   height: auto;
-}
-
-img.recentSlides {
-  opacity: 0.3;
-  position: absolute;
-  bottom: 0px;
 }
 
 .container {
@@ -290,6 +279,14 @@ img.recentSlides {
 .cell {
   padding: 25px;
   transition: all 0.25s ease;
+}
+
+/* w3 */
+.cell-1.w3-content.w3-section {
+  max-height: 1200px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  overflow: hidden;
 }
 
 /* media query */
