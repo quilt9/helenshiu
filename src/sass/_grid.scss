@@ -37,7 +37,7 @@ $one-border: 1px solid rgba($white, .3);
 
 %two-column {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: span 2;
 }
 
 %three-column {
@@ -90,7 +90,6 @@ $one-border: 1px solid rgba($white, .3);
 /* cells */
 .cell-1 {
 	@extend %four-column;
-  @extend %gradient1;
 }
 
 .cell-2 {

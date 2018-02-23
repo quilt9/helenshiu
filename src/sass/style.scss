@@ -1,5 +1,5 @@
-@import 'palette';
-@import 'grid';
+@import '_palette';
+@import '_grid';
 
 /* Variables
 ===============================================
@@ -13,8 +13,7 @@ $white: rgba(255, 255, 255, 1);
 ===============================================
 */
 
-
-/* Fonts
+/* Extend
 =============================================== */
 
 %title-font {
@@ -32,17 +31,16 @@ $white: rgba(255, 255, 255, 1);
 %gradient-body {
 	background-oolor: $primary-light;
 	background-image: url(/img/star-bg.svg),linear-gradient(-45deg, $primary-light 0%, $secondary-light 100%);
-	background-repeat: no;
-    background-position: center 0, 0 0, 0 0;
+	background-repeat: no-repeat;
+  background-position: center 0, 0 0, 0 0;
+  background-size: contain;
 }
 
 h1, h2, h3, h4 {
 	@extend %title-font;
 }
 
-
 /* Body */
-
 body {
 	@extend %gradient-body;
 	@extend %body-font;
@@ -50,13 +48,32 @@ body {
 	padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body, a {
 	color: $primary-light;
 }
 
+header {
+  position: relative;
+  max-height: 1200px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+img.recentSlides {
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0px;
+}
+
 .container {
   padding: 0 25px 25px 25px;
-  background: rgba($primary-light, .3);
 }
 
 .title {

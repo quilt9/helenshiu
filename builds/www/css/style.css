@@ -28,12 +28,6 @@ $test: rgba(175, 217, 22, 1);
   grid-column-end: 5;
 }
 
-.cell-1 {
-  background-image: rgba(15, 213, 224, 0.3);
-  /* fallback for old browsers */
-  background-image: linear-gradient(to top, rgba(15, 213, 224, 0.3) 0%, rgba(42, 162, 179, 0.3) 100%);
-}
-
 .cell-3, .cell-5, .cell-6, .cell-7, .cell-9 {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -214,7 +208,7 @@ $secondary-light: rgba(153, 146, 140, 1);
 $white: rgba(255, 255, 255, 1);
 ===============================================
 */
-/* Fonts
+/* Extend
 =============================================== */
 h1, h2, h3, h4 {
   font-family: 'Roboto Mono', monospace;
@@ -231,8 +225,9 @@ body {
 body {
   background-oolor: #d0dde0;
   background-image: url(/img/star-bg.svg), linear-gradient(-45deg, #d0dde0 0%, #99928c 100%);
-  background-repeat: no;
+  background-repeat: no-repeat;
   background-position: center 0, 0 0, 0 0;
+  background-size: contain;
 }
 
 /* Body */
@@ -241,13 +236,32 @@ body {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body, a {
   color: #d0dde0;
 }
 
+header {
+  position: relative;
+  max-height: 1200px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+img.recentSlides {
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0px;
+}
+
 .container {
   padding: 0 25px 25px 25px;
-  background: rgba(208, 221, 224, 0.3);
 }
 
 .title {
