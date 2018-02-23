@@ -101,6 +101,16 @@ img {
   overflow: hidden;
 }
 
+/* modal */
+.w3-modal-content {
+    width: 75%;
+    height: 75%;
+    overflow: auto;
+}
+
+.w3-modal {
+  background-color: rgba($primary-dark, .7);
+}
 
 /* media query */
 

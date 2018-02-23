@@ -1,5 +1,7 @@
 /* jshint browser: true */
 
+
+// header slider
 var myIndex = 0;
 
 function carousel() {

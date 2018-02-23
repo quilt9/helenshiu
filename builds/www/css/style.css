@@ -56,6 +56,11 @@ $test: rgba(175, 217, 22, 1);
 ============================================================= */
 /* main grid */
 /* cells */
+.cell-1 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
 .cell-3 {
   grid-column-start: 1;
   grid-column-end: span 4;
@@ -89,8 +94,8 @@ $test: rgba(175, 217, 22, 1);
 .cell-10 {
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 /* media query */
@@ -287,6 +292,17 @@ img {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   overflow: hidden;
+}
+
+/* modal */
+.w3-modal-content {
+  width: 75%;
+  height: 75%;
+  overflow: auto;
+}
+
+.w3-modal {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* media query */
