@@ -104,44 +104,51 @@ $one-border: 1px solid rgba($white, .3);
   grid-column-start: 1;
   grid-column-end: span 4;
   @extend %top-left-right-bottom;
+  position: relative;
 }
 
 .cell-4 {
   @extend %four-column;
   @extend %left-right-bottom;
+  position: relative;
 }
 
 .cell-5 {
   grid-column-start: 1;
   grid-column-end: span 4;
   @extend %top-left-right-bottom;
+  position: relative;
 }
 
 .cell-6 {
   grid-column-start: 1;
   grid-column-end: span 4;
   @extend %top-left-right-bottom;
+  position: relative;
 }
 
 .cell-7 {
   grid-column-start: 1;
   grid-column-end: span 4;
   @extend %top-left-right-bottom;
+  position: relative;
 }
 
 .cell-8 {
   grid-column-start: 1;
   grid-column-end: span 4;
   @extend %left-right;
+  position: relative;
 }
 
 .cell-9 {
   grid-column-start: 1;
   grid-column-end: span 4;
   @extend %top-left-right-bottom;
+  position: relative;
 }
 
-.cell-10 {
+footer {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;

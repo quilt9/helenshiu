@@ -84,14 +84,14 @@ img {
 }
 
 .cell:hover {
-  background-color: rgba($secondary-dark, .7);
+  background-color: lighten($primary-dark, 40%);
   color: $primary-blue;
   transition: all 0.25s ease;
 }
 
 .cell {
 	padding: 25px;
-  transition: all 0.25s ease;
+  transition: all 0.5s ease;
 }
 
 /* w3 */

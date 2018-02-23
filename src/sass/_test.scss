@@ -10,15 +10,15 @@
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-image: linear-gradient(to bottom, rgba($secondary-light, .7) 50%, rgba($primary-dark, .3) 100%);
+  background: lighten($primary-dark, 40%);
 }
 
-.cell-2:hover .overlay {
+.cell:hover .overlay {
   opacity: 1;
 }
 
 .text {
-  color: white;
+  color: $secondary-blue;
   font-size: 20px;
   position: absolute;
   top: 50%;
