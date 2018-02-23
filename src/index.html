@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <head lang="en">
-	<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title></title>
-<meta name="description" content="">
+<!-- Title and Meta
+================================================== -->
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+<title>DESIGN + HTML + CSS + JS :: Helen Shiu</title>
+<!-- Mobile Specific Meta
+================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<!-- CSS
+================================================== -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <link rel="stylesheet" href="css/style.min.css">
 
 </head>
 
 <body>
-  <main class="container">
+  <!-- Main
+  ================================================== -->
+  <main role="main" class="container">
+    <!-- Grid
+    ================================================== -->
     <div class="grid">
+      <!-- Slider
+      ================================================== -->
       <div class="slider cell-1 w3-content w3-section" style="max-width:1200px">
     		<img class="mySlides w3-animate-fading" src="https://placehold.it/2400x580/888?text=1" alt="Recent Works" style="width:100%">
         <img class="mySlides w3-animate-fading" src="https://placehold.it/2400x580/888?text=2" alt="Recent Works" style="width:100%">
@@ -85,8 +94,9 @@
             <div class="text">Hello World</div>
           </div>
       </div><!-- cell-9 -->
-
-      <section class="works">
+      <!-- Modal
+      ================================================== -->
+      <section role="modal" class="works">
         <div id="id01" class="w3-modal">
           <div class="w3-modal-content w3-card-4 w3-animate-zoom">
             <header class="w3-container"> 
@@ -117,35 +127,31 @@
               <h1>Tokyo</h1>
               <p>Tokyo is the capital of Japan.</p><br>
             </div><!-- #work-3 -->
-
           </div><!-- .w3-modal-content -->
         </div><!-- #id01 -->
       </section>
-
+      <!-- Footer
+      ================================================== -->
       <footer class="cell cell-10">
         <h1>Contact</h1>
       </footer><!-- footer -->
-
-
-
     </div><!-- .grid -->
   </main>
 </body>
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 
-	<script type="text/javascript">
-		WebFontConfig = {
-		google: {
-			families: [ 'Roboto', 'Roboto Mono' ] }
-		};
-		(function() {
-		var wf = document.createElement('script');
-		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-		wf.type = 'text/javascript';
-		wf.async = 'true';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(wf, s);
-		})();
-	</script>
-
+<script type="text/javascript">
+	WebFontConfig = {
+	google: {
+		families: [ 'Roboto', 'Roboto Mono' ] }
+	};
+	(function() {
+	var wf = document.createElement('script');
+	wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	wf.type = 'text/javascript';
+	wf.async = 'true';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(wf, s);
+	})();
+</script>
 </html>
