@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 		  options: {
 		    map: true,
 		    processors: [
-		      require('autoprefixer')({browsers: ['last 2 version']})
+		      require('autoprefixer')({browsers: ['last 8 version', 'ie 8', 'ie 9']})
 		    ]
 		  },
 		  dist: {
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 
 		autoprefixer: {
 			options: {
-				browsers: ['last 2 version', 'ie 8', 'ie 9']
+				browsers: ['last 8 version', 'ie 8', 'ie 9']
 			},
 			single_file: {
 			     src: 'builds/www/css/style.css',
