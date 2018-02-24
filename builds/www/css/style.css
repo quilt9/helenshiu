@@ -230,6 +230,7 @@ footer {
   width: 100%;
   opacity: 0;
   -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
   transition: .5s ease;
   background: #666666;
 }
@@ -259,7 +260,6 @@ footer {
 
 .cell-1 .sldier-text {
   position: relative;
-  z-index: 4;
 }
 
 .cell-1 .sldier-text h1 {
@@ -280,7 +280,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
   z-index: 0;
@@ -387,10 +388,13 @@ body {
 
 body {
   background-oolor: #d0dde0;
+  background-image: url(/img/star-bg.svg), -webkit-linear-gradient(135deg, #d0dde0 0%, #99928c 100%);
+  background-image: url(/img/star-bg.svg), -o-linear-gradient(135deg, #d0dde0 0%, #99928c 100%);
   background-image: url(/img/star-bg.svg), linear-gradient(-45deg, #d0dde0 0%, #99928c 100%);
   background-repeat: no-repeat;
   background-position: center 0, 0 0, 0 0;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
 }
 
 /* Body */
