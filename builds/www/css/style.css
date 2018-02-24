@@ -229,6 +229,8 @@ footer {
   height: 100%;
   width: 100%;
   opacity: 0;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
   transition: .5s ease;
   background: #666666;
 }
@@ -243,7 +245,8 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
 
@@ -260,12 +263,14 @@ footer {
 }
 
 .cell-1 .sldier-text h1 {
-  animation: fade-in ease-in-out 2s 0.5s both;
+  -webkit-animation: fade-in ease-in-out 2s 0.5s both;
+          animation: fade-in ease-in-out 2s 0.5s both;
 }
 
 .cell-1 .sldier-text p {
   font-size: 120%;
-  animation: fade-in ease-in-out 2s 1s both;
+  -webkit-animation: fade-in ease-in-out 2s 1s both;
+          animation: fade-in ease-in-out 2s 1s both;
 }
 
 .cell-1 ul.recent-works li {
@@ -275,17 +280,20 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
   z-index: 0;
   opacity: 0;
-  animation: fade-out 15s infinite both;
+  -webkit-animation: fade-out 15s infinite both;
+          animation: fade-out 15s infinite both;
 }
 
 .cell-1 ul.recent-works li:nth-child(1) {
   background-image: url(/img/2400x500_1.png);
-  animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 @media (min-width: 58em) {
@@ -295,7 +303,8 @@ footer {
 }
 .cell-1 ul.recent-works li:nth-child(2) {
   background-image: url(/img/2400x500_2.png);
-  animation-delay: 10s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
 }
 
 @media (min-width: 58em) {
@@ -305,7 +314,8 @@ footer {
 }
 .cell-1 ul.recent-works li:nth-child(3) {
   background-image: url(/img/2400x500_3.png);
-  animation-delay: 15s;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
 }
 
 @media (min-width: 58em) {
@@ -316,6 +326,14 @@ footer {
 /*----------------------------------------------
 --Fade ins
 -----------------------------------------------  */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -327,6 +345,14 @@ footer {
 /*----------------------------------------------
 --Fade out for slider
 -----------------------------------------------  */
+@-webkit-keyframes fade-out {
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+}
 @keyframes fade-out {
   33% {
     opacity: 1;
@@ -335,7 +361,56 @@ footer {
     opacity: 0;
   }
 }
-/* Variables
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #1a1a1a;
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -o-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  width: 90vw;
+  position: relative;
+  margin: 10% auto;
+  padding: 5%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.close {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: #2aa2b3;
+}
+
+@media (min-width: 1011px) {
+  .modalDialog > div {
+    width: 50vw;
+  }
+}
+/* Colours
 ===============================================
 $primary-dark: rgba(0, 0, 0, 1);
 $secondary-dark: rgba(49, 57, 35, 1);
@@ -346,40 +421,44 @@ $secondary-light: rgba(153, 146, 140, 1);
 $white: rgba(255, 255, 255, 1);
 ===============================================
 */
+/* Variables
+=============================================== */
 /* Extend
 =============================================== */
-h1, h2, h3, h4 {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 21px;
-  color: rgba(49, 57, 35, 0.7);
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  color: rgba(208, 221, 224, 0.7);
-}
-
 body {
   background-oolor: #d0dde0;
-  background-image: url(/img/star-bg.svg), linear-gradient(-45deg, #d0dde0 0%, #99928c 100%);
+  background-image: url(/img/star-bg.svg), -webkit-linear-gradient(135deg, #d0dde0 30%, #99928c 100%);
+  background-image: url(/img/star-bg.svg), -o-linear-gradient(135deg, #d0dde0 30%, #99928c 100%);
+  background-image: url(/img/star-bg.svg), linear-gradient(-45deg, #d0dde0 30%, #99928c 100%);
   background-repeat: no-repeat;
   background-position: center 0, 0 0, 0 0;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
 }
 
 /* Body */
-body {
-  margin: 0;
-  padding: 0;
+h1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2em;
+  color: #207d8a;
 }
 
+.modalDialog font-family, body {
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  color: #4c5936;
+}
+
+/* Layout
+=============================================== */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-body, a {
+a {
   color: #d0dde0;
+  text-decoration: none;
 }
 
 img {
@@ -391,53 +470,17 @@ img {
   padding: 0 25px 25px 25px;
 }
 
-.title {
-  font-size: 5em;
-  margin-top: 0;
-}
-
 .mono {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .roboto {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.f8 {
-  font-size: .78rem;
-}
-
-/*
-.cell:hover {
-  background-color: lighten($primary-dark, 40%);
-  color: $primary-blue;
-  transition: all 0.25s ease;
-}
-
-.cell {
-	padding: 25px;
-  transition: all 0.5s ease;
-}
-*/
-/* modal */
-.w3-modal-content {
-  width: 75%;
-  height: 75%;
-  overflow: auto;
-}
-
-.w3-modal {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* media query */
+/* media query
+=============================================== */
 @media (min-width: 1011px) {
-  .title {
-    font-size: 130px;
-    margin-top: 0;
-  }
-
   .mobile-message {
     display: none;
   }

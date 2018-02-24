@@ -31,6 +31,7 @@
     "grunt-wiredep": "^3.0.1"
   },
   "dependencies": {
+    "normalize-scss": "^7.0.1",
     "w3-css": "^4.0.4"
   }
 }
