@@ -1,0 +1,121 @@
+// _slider.scss
+
+.cell-1 {
+  test-align: center;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  position: relative;
+}
+/*
+.cell-1:after {
+	content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(118, 144, 164, 0.4);
+  z-index: 0;
+}
+*/
+.cell-1 .sldier-text {
+  position: relative;
+  z-index: 4;
+}
+.cell-1 .sldier-text h1 {
+  -webkit-animation: fade-in ease-in-out 2s 0.5s both;
+  -moz-animation: fade-in ease-in-out 2s 0.5s both;
+  animation: fade-in ease-in-out 2s 0.5s both;
+}
+.cell-1 .sldier-text p {
+  font-size: 120%;
+  -webkit-animation: fade-in ease-in-out 2s 1s both;
+  -moz-animation: fade-in ease-in-out 2s 1s both;
+  animation: fade-in ease-in-out 2s 1s both;
+}
+
+.cell-1 ul.recent-works li {
+	list-style-type: none;
+	height: 100% !important;
+  width: 100%;
+	position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+	z-index: 0;
+  opacity: 0;
+	-webkit-animation: fade-out 15s infinite both;
+  -moz-animation: fade-out 15s infinite both;
+  animation: fade-out 15s infinite both;
+}
+
+.cell-1 ul.recent-works li:nth-child(1) {
+  background-image: url(/img/2400x500_1.png);
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  animation-delay: 5s; }
+  @media (min-width: 58em) {
+    .cell-1 ul.recent-works li:nth-child(1) {
+    background-image: url(/img/2400x500_1.png);
+    }
+}
+
+.cell-1 ul.recent-works li:nth-child(2) {
+  background-image: url(/img/2400x500_2.png);
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  animation-delay: 10s; }
+  @media (min-width: 58em) {
+    .cell-1 ul.recent-works li:nth-child(2) {
+    background-image: url(/img/2400x500_2.png);
+    }
+}
+
+.cell-1 ul.recent-works li:nth-child(3) {
+  background-image: url(/img/2400x500_3.png);
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  animation-delay: 15s; }
+  @media (min-width: 58em) {
+    .cell-1 ul.recent-works li:nth-child(3) {
+      background-image: url(/img/2400x500_3.png); } }
+
+/*----------------------------------------------
+--Fade ins
+-----------------------------------------------  */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/*----------------------------------------------
+--Fade out for slider
+-----------------------------------------------  */
+@-webkit-keyframes fade-out {
+  33% {
+    opacity: 1; }
+  66% {
+    opacity: 0; } }
+@-moz-keyframes fade-out {
+  33% {
+    opacity: 1; }
+  66% {
+    opacity: 0; } }
+@keyframes fade-out {
+  33% {
+    opacity: 1; }
+  66% {
+    opacity: 0; } }
