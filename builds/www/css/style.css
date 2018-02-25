@@ -361,10 +361,6 @@ footer {
     opacity: 0;
   }
 }
-#openModal-1 {
-  display: none;
-}
-
 .modalDialog {
   position: fixed;
   top: 0;
@@ -378,6 +374,16 @@ footer {
   -o-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   pointer-events: none;
+}
+.modalDialog .cancel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+.modalDialog:target {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modalDialog:target {
