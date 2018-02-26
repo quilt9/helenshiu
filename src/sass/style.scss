@@ -21,7 +21,7 @@ $white: rgba(255, 255, 255, 1);
 $heading: 'Roboto Mono', monospace;
 $font-family: 'Roboto', sans-serif;
 $font-size: 100%;
-$heading-size: 2em;
+$heading-size: 1.25em;
 
 /* Extend
 =============================================== */
@@ -61,6 +61,9 @@ h1 {
   @extend %title-font;
 }
 
+p, .text {
+  font-size: .75em;
+}
 
 a {
   text-decoration: none;
@@ -98,13 +101,23 @@ img {
   /* header
   =============================================== */
   .cell-1 .sldier-text h1.header-title {
-    font-size: 3em;
+    font-size: 2em;
     position: absolute;
-    top: 125px;
+    top: 45%;
   }
 
   .mobile-message {
     display: none;
+  }
+
+  /* fonts
+  =============================================== */
+  h1 {
+    font-size: 1.85em;
+  }
+
+  p, .text {
+    font-size: 1em;
   }
 }
 

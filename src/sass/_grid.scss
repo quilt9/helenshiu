@@ -85,7 +85,7 @@ $one-border: 1px solid rgba($white, .3);
 /* main grid */
 .grid {
   @extend %main-grid;
-  grid-auto-rows: minmax(120px, auto);
+  grid-auto-rows: minmax(180px, auto);
 }
 
 .cell {
@@ -103,6 +103,10 @@ $one-border: 1px solid rgba($white, .3);
   @extend %four-column;
   @extend %top-left-right;
   position: relative;
+  background-image: url('https://placehold.it/1800x1800');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .cell-3 {
@@ -187,9 +191,7 @@ footer {
     border-left: 1px solid rgba($white, .3);
     border-bottom: 1px solid rgba($white, .3);
     border-right: none;
-    background-image: url('https://placehold.it/1800x1800');
-    background-size: cover;
-    background-repeat: no-repeat;
+    
   }
 
   .cell-3 {

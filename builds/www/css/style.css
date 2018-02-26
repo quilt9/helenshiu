@@ -56,7 +56,7 @@ $test: rgba(175, 217, 22, 1);
 ============================================================= */
 /* main grid */
 .grid {
-  grid-auto-rows: minmax(120px, auto);
+  grid-auto-rows: minmax(180px, auto);
 }
 
 .cell {
@@ -71,6 +71,11 @@ $test: rgba(175, 217, 22, 1);
 
 .cell-2 {
   position: relative;
+  background-image: url("https://placehold.it/1800x1800");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .cell-3 {
@@ -146,10 +151,6 @@ footer {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     border-right: none;
-    background-image: url("https://placehold.it/1800x1800");
-    -webkit-background-size: cover;
-            background-size: cover;
-    background-repeat: no-repeat;
   }
 
   .cell-3 {
@@ -277,7 +278,7 @@ footer {
 @media (min-width: 58em) {
   .cell-1 ul.recent-works li:nth-child(1) {
     background-image: url(/img/2400x500_1.png);
-    background-position: 70%;
+    background-position: 50%;
   }
 }
 .cell-1 ul.recent-works li:nth-child(2) {
@@ -289,7 +290,7 @@ footer {
 @media (min-width: 58em) {
   .cell-1 ul.recent-works li:nth-child(2) {
     background-image: url(/img/2400x500_2.png);
-    background-position: 70%;
+    background-position: 50%;
   }
 }
 .cell-1 ul.recent-works li:nth-child(3) {
@@ -301,7 +302,7 @@ footer {
 @media (min-width: 58em) {
   .cell-1 ul.recent-works li:nth-child(3) {
     background-image: url(/img/2400x500_3.png);
-    background-position: 70%;
+    background-position: 50%;
   }
 }
 /*----------------------------------------------
@@ -627,7 +628,7 @@ body {
 /* Body */
 h1 {
   font-family: "Roboto Mono", monospace;
-  font-size: 2em;
+  font-size: 1.25em;
   color: #207d8a;
 }
 
@@ -642,6 +643,10 @@ h1 {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+p, .text {
+  font-size: .75em;
 }
 
 a {
@@ -677,13 +682,23 @@ img {
   /* header
   =============================================== */
   .cell-1 .sldier-text h1.header-title {
-    font-size: 3em;
+    font-size: 2em;
     position: absolute;
-    top: 125px;
+    top: 45%;
   }
 
   .mobile-message {
     display: none;
+  }
+
+  /* fonts
+  =============================================== */
+  h1 {
+    font-size: 1.85em;
+  }
+
+  p, .text {
+    font-size: 1em;
   }
 }
 
