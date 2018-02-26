@@ -13,16 +13,20 @@
   background: lighten($primary-dark, 40%);
 }
 
-.cell:hover .overlay {
-  opacity: 1;
+a.overlay,
+{
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .text {
+  width: 80%;
+  line-height: 2em;
+  text-align: center;
   color: $secondary-blue;
-  font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
 }

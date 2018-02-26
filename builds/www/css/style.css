@@ -55,6 +55,10 @@ $test: rgba(175, 217, 22, 1);
 /* Layoute
 ============================================================= */
 /* main grid */
+.grid {
+  grid-auto-rows: minmax(120px, auto);
+}
+
 .cell {
   padding: 1em;
 }
@@ -122,8 +126,8 @@ footer {
     max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 150px 127px 127px 127px 127px 127px 127px 127px 127px 127px 150px;
-    margin: 200px auto;
+    grid-auto-rows: minmax(150px, auto);
+    margin: 50px auto;
   }
 
   .cell-1 {
@@ -142,6 +146,10 @@ footer {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     border-right: none;
+    background-image: url("https://placehold.it/1800x1800");
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .cell-3 {
@@ -220,36 +228,6 @@ footer {
     grid-row-end: 12;
   }
 }
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s ease;
-  -o-transition: .5s ease;
-  transition: .5s ease;
-  background: #666666;
-}
-
-.cell:hover .overlay {
-  opacity: 1;
-}
-
-.text {
-  color: #0fd5e0;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-
 .cell-1 {
   test-align: center;
   width: 100%;
@@ -299,6 +277,7 @@ footer {
 @media (min-width: 58em) {
   .cell-1 ul.recent-works li:nth-child(1) {
     background-image: url(/img/2400x500_1.png);
+    background-position: 70%;
   }
 }
 .cell-1 ul.recent-works li:nth-child(2) {
@@ -310,6 +289,7 @@ footer {
 @media (min-width: 58em) {
   .cell-1 ul.recent-works li:nth-child(2) {
     background-image: url(/img/2400x500_2.png);
+    background-position: 70%;
   }
 }
 .cell-1 ul.recent-works li:nth-child(3) {
@@ -321,6 +301,7 @@ footer {
 @media (min-width: 58em) {
   .cell-1 ul.recent-works li:nth-child(3) {
     background-image: url(/img/2400x500_3.png);
+    background-position: 70%;
   }
 }
 /*----------------------------------------------
@@ -374,6 +355,7 @@ footer {
   -o-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   pointer-events: none;
+  overflow: scroll;
 }
 .modalDialog .cancel {
   position: absolute;
@@ -397,6 +379,7 @@ footer {
   margin: 5% auto;
   padding: 2%;
   color: rgba(255, 255, 255, 0.7);
+  text-align: center;
 }
 
 .close {
@@ -420,17 +403,13 @@ footer {
     width: 80vw;
   }
 }
-/* slidershow
+/* modal slidershow
 ================================================== */
-label, #active, img {
+label,
+#active,
+img {
   -moz-user-select: none;
   -webkit-user-select: none;
-}
-
-.catch {
-  display: block;
-  height: 0;
-  overflow: hidden;
 }
 
 #slider {
@@ -467,7 +446,10 @@ input {
 }
 
 article img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  max-height: 90%;
 }
 
 #slides .inner {
@@ -565,16 +547,13 @@ article img {
 #slides {
   position: relative;
   padding: 2px;
-  border: 1px solid #ddd;
-  margin: 45px 0 0;
-  background: #FFF;
-  background: -webkit-linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
-  background: -o-linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(20%, #FFF), color-stop(80%, #EEE), to(#DDD));
-  background: linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
-  border-radius: 2px 2px 2px 2px;
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  margin: 1em 0;
+}
+
+h3.text {
+  font-size: 1.25em;
+  font-weight: normal;
+  margin: 0 0 1em 0;
 }
 
 #slides .inner {
@@ -666,8 +645,13 @@ h1 {
 }
 
 a {
-  color: #d0dde0;
   text-decoration: none;
+}
+
+a.overlay {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 img {
@@ -689,7 +673,15 @@ img {
 
 /* media query
 =============================================== */
-@media (min-width: 1011px) {
+@media (min-width: 768px) {
+  /* header
+  =============================================== */
+  .cell-1 .sldier-text h1.header-title {
+    font-size: 3em;
+    position: absolute;
+    top: 125px;
+  }
+
   .mobile-message {
     display: none;
   }

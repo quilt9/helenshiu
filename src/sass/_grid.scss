@@ -85,6 +85,7 @@ $one-border: 1px solid rgba($white, .3);
 /* main grid */
 .grid {
   @extend %main-grid;
+  grid-auto-rows: minmax(120px, auto);
 }
 
 .cell {
@@ -166,18 +167,8 @@ footer {
     max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 150px
-      127px
-      127px
-      127px
-      127px
-      127px
-      127px
-      127px
-      127px
-      127px
-      150px;
-    margin: 200px auto;
+    grid-auto-rows: minmax(150px, auto);
+    margin: 50px auto;
   }
 
   .cell-1 {
@@ -196,6 +187,9 @@ footer {
     border-left: 1px solid rgba($white, .3);
     border-bottom: 1px solid rgba($white, .3);
     border-right: none;
+    background-image: url('https://placehold.it/1800x1800');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .cell-3 {

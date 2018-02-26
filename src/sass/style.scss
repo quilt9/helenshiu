@@ -1,7 +1,6 @@
 @import '_normalize';
 @import '_palette';
 @import '_grid';
-@import '_test';
 @import '_slider';
 @import '_modal';
 
@@ -64,8 +63,14 @@ h1 {
 
 
 a {
-	color: $primary-light;
   text-decoration: none;
+}
+
+a.overlay,
+{
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 img {
@@ -88,7 +93,15 @@ img {
 
 /* media query
 =============================================== */
-@media (min-width: 1011px) {
+@media (min-width: 768px) {
+
+  /* header
+  =============================================== */
+  .cell-1 .sldier-text h1.header-title {
+    font-size: 3em;
+    position: absolute;
+    top: 125px;
+  }
 
   .mobile-message {
     display: none;
