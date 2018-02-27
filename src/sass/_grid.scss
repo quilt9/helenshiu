@@ -79,6 +79,12 @@ $one-border: 1px solid rgba($white, .3);
   border-right: $one-border;
 }
 
+%grid-bkbg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 /* Layoute
 ============================================================= */
 
@@ -103,16 +109,16 @@ $one-border: 1px solid rgba($white, .3);
   @extend %four-column;
   @extend %top-left-right;
   position: relative;
-  background-image: url('https://placehold.it/1800x1800');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-image: url('https://placehold.it/900x900');
+  @extend %grid-bkbg;
 }
 
 .cell-3 {
   grid-column-start: 1;
   grid-column-end: span 4;
   @extend %top-left-right-bottom;
+  background-image: url('https://placehold.it/900x900');
+  @extend %grid-bkbg;
   position: relative;
 }
 
