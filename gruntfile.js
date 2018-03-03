@@ -105,7 +105,7 @@ module.exports = function(grunt) {
 		}, //imagemin
 
 		clean: {
-			//contents: ['builds/www/img/*'],
+			contents: ['builds/www/img/*', 'src/tmp'],
 			files: ['builds/www/test', 'src/tmp']
 		}, //clean
 

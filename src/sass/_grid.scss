@@ -19,7 +19,7 @@ $gap-width: 10px;
 $row-height: 60px;
 $column-width: 60px;
 $test-bkgd: rgba($test, .5);
-$one-border: 1px solid rgba($white, .3);
+$one-border: 1px solid rgba($primary-dark, .3);
 
 /* Extend
 ============================================================= */
@@ -109,7 +109,8 @@ $one-border: 1px solid rgba($white, .3);
   @extend %four-column;
   @extend %top-left-right;
   position: relative;
-  background-image: url('https://placehold.it/900x900');
+  background-image: url('/img/gd_hp_1.jpg');
+  background-position: right bottom;
   @extend %grid-bkbg;
 }
 

@@ -59,6 +59,11 @@ body {
 
 h1 {
   @extend %title-font;
+  display: inline;
+  background-color: rgba($primary-dark, .3);
+  margin-left: -15px;
+  padding: 3%;
+  color: $white;
 }
 
 p, .text {
@@ -113,7 +118,7 @@ img {
   /* fonts
   =============================================== */
   h1 {
-    font-size: 1.85em;
+    font-size: 1.5em;
   }
 
   p, .text {

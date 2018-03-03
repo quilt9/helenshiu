@@ -29,27 +29,27 @@ $test: rgba(175, 217, 22, 1);
 }
 
 .cell-3, .cell-5, .cell-6, .cell-7, .cell-9 {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .cell-2 {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .cell-4 {
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .cell-8 {
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .cell-2, .cell-3 {
@@ -78,7 +78,8 @@ $test: rgba(175, 217, 22, 1);
 
 .cell-2 {
   position: relative;
-  background-image: url("https://placehold.it/900x900");
+  background-image: url("/img/gd_hp_1.jpg");
+  background-position: right bottom;
 }
 
 .cell-3 {
@@ -779,6 +780,14 @@ h1 {
           box-sizing: border-box;
 }
 
+h1 {
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-left: -15px;
+  padding: 3%;
+  color: white;
+}
+
 p, .text {
   font-size: .75em;
 }
@@ -828,7 +837,7 @@ img {
   /* fonts
   =============================================== */
   h1 {
-    font-size: 1.85em;
+    font-size: 1.5em;
   }
 
   p, .text {
