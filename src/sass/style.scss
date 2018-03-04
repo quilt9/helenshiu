@@ -113,6 +113,10 @@ img {
   font-family: $font-family;
 }
 
+.mobile-message {
+  display: none;
+}
+
 
 /* media query
 =============================================== */
@@ -126,9 +130,10 @@ img {
     top: 45%;
   }
 
-  .mobile-message {
-    display: none;
+.mobile-message {
+    display: block;
   }
+
 
   /* fonts
   =============================================== */
