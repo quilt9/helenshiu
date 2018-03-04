@@ -23,36 +23,31 @@ $test: rgba(175, 217, 22, 1);
   margin: 50px auto;
 }
 
-.cell-1, .cell-2, .cell-4 {
+.cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7 {
   grid-column-start: 1;
   grid-column-end: 5;
 }
 
-.cell-3, .cell-5, .cell-6, .cell-7, .cell-9 {
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+.cell-3, .cell-7 {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .cell-2 {
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.cell-4 {
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+.cell-4, .cell-5, .cell-6 {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.cell-8 {
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.cell-2, .cell-3 {
+.cell-3 {
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -64,10 +59,6 @@ $test: rgba(175, 217, 22, 1);
 /* main grid */
 .grid {
   grid-auto-rows: minmax(180px, auto);
-}
-
-.cell {
-  padding: 1em;
 }
 
 /* cells */
@@ -83,8 +74,6 @@ $test: rgba(175, 217, 22, 1);
 }
 
 .cell-3 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
   background-image: url("https://placehold.it/900x900");
   position: relative;
 }
@@ -94,32 +83,14 @@ $test: rgba(175, 217, 22, 1);
 }
 
 .cell-5 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
   position: relative;
 }
 
 .cell-6 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
   position: relative;
 }
 
 .cell-7 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
-  position: relative;
-}
-
-.cell-8 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
-  position: relative;
-}
-
-.cell-9 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
   position: relative;
 }
 
@@ -163,75 +134,61 @@ footer {
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 7;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .cell-4 {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     grid-row-start: 6;
-    grid-row-end: 8;
+    grid-row-end: 9;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .cell-5 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 8;
-    border-left: none;
-    border-right: none;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 10;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .cell-6 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 7;
-    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: none;
-    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .cell-7 {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 7;
-    grid-row-end: 11;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .cell-8 {
     grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 8;
-    grid-row-end: 11;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: none;
-  }
-
-  .cell-9 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 9;
-    grid-row-end: 11;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: none;
-  }
-
-  .cell-10 {
-    grid-column-start: 1;
     grid-column-end: 5;
-    grid-row-start: 11;
-    grid-row-end: 12;
+    grid-row-start: 10;
+    grid-row-end: 11;
   }
 }
 .cell-1 {
@@ -783,8 +740,6 @@ h1 {
 h1 {
   display: inline;
   background-color: rgba(0, 0, 0, 0.3);
-  margin-left: -15px;
-  padding: 3%;
   color: white;
 }
 
@@ -796,12 +751,6 @@ a {
   text-decoration: none;
 }
 
-a.overlay {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -809,6 +758,35 @@ img {
 
 .container {
   padding: 0 25px 25px 25px;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-container > h1 {
+  text-align: center;
+}
+
+.flex-container > a {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .mono {

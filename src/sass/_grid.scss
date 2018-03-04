@@ -19,7 +19,7 @@ $gap-width: 10px;
 $row-height: 60px;
 $column-width: 60px;
 $test-bkgd: rgba($test, .5);
-$one-border: 1px solid rgba($primary-dark, .3);
+$one-border: 1px solid rgba($white, .3);
 
 /* Extend
 ============================================================= */
@@ -30,19 +30,34 @@ $one-border: 1px solid rgba($primary-dark, .3);
   margin: 50px auto;
 }
 
-%one-column {
+%one-column-left {
   grid-column-start: 1;
   grid-column-end: span 1;
 }
 
-%two-column {
+%one-column-right {
+  grid-column-start: 3;
+  grid-column-end: span 1;
+}
+
+%two-column-left {
   grid-column-start: 1;
   grid-column-end: span 2;
 }
 
-%three-column {
+%two-column-right {
+  grid-column-start: 3;
+  grid-column-end: span 2;
+}
+
+%three-column-left {
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: span 3;
+}
+
+%three-column-right {
+  grid-column-start: 2;
+  grid-column-end: span 3;
 }
 
 %four-column {
@@ -95,7 +110,7 @@ $one-border: 1px solid rgba($primary-dark, .3);
 }
 
 .cell {
-  padding: 1em;
+  //padding: 1em;
 }
 
 /* cells */
@@ -111,12 +126,10 @@ $one-border: 1px solid rgba($primary-dark, .3);
   position: relative;
   background-image: url('/img/gd_hp_1.jpg');
   background-position: right bottom;
-  @extend %grid-bkbg;
 }
 
 .cell-3 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
+  @extend %four-column;
   @extend %top-left-right-bottom;
   background-image: url('https://placehold.it/900x900');
   @extend %grid-bkbg;
@@ -130,36 +143,19 @@ $one-border: 1px solid rgba($primary-dark, .3);
 }
 
 .cell-5 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
-  @extend %top-left-right-bottom;
+  @extend %four-column;
+  @extend %left-right-bottom;
   position: relative;
 }
 
 .cell-6 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
-  @extend %top-left-right-bottom;
+  @extend %four-column;
+  @extend %left-right-bottom;
   position: relative;
 }
 
 .cell-7 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
-  @extend %top-left-right-bottom;
-  position: relative;
-}
-
-.cell-8 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
-  @extend %left-right;
-  position: relative;
-}
-
-.cell-9 {
-  grid-column-start: 1;
-  grid-column-end: span 4;
+  @extend %four-column;
   @extend %top-left-right-bottom;
   position: relative;
 }
@@ -194,11 +190,10 @@ footer {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 6;
-    border-top: 1px solid rgba($white, .3);
-    border-left: 1px solid rgba($white, .3);
-    border-bottom: 1px solid rgba($white, .3);
+    border-top: $one-border;
+    border-left: $one-border;
+    border-bottom: $one-border;
     border-right: none;
-    
   }
 
   .cell-3 {
@@ -206,74 +201,60 @@ footer {
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 7;
-    border: 1px solid rgba($white, .3);
+    border-top: $one-border;
+    border-left: $one-border;
+    border-bottom: $one-border;
+    border-right: $one-border;
   }
 
   .cell-4 {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     grid-row-start: 6;
-    grid-row-end: 8;
-    border-left: 1px solid rgba($white, .3);
-    border-bottom: 1px solid rgba($white, .3);
-    border-right: 1px solid rgba($white, .3);
+    grid-row-end: 9;
+    border-top: $one-border;
+    border-left: $one-border;
+    border-bottom: $one-border;
+    border-right: $one-border;
   }
 
   .cell-5 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 8;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid rgba($white, .3);
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 10;
+    border-top: $one-border;
+    border-left: $one-border;
+    border-bottom: $one-border;
+    border-right: $one-border;
   }
 
   .cell-6 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 7;
-    grid-row-end: 9;
-    border-left: 1px solid rgba($white, .3);
-    border-bottom: none;
-    border-right: none;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    border-top: $one-border;
+    border-left: $one-border;
+    border-bottom: $one-border;
+    border-right: $one-border;
   }
 
   .cell-7 {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 7;
-    grid-row-end: 11;
-    border-left: 1px solid rgba($white, .3);
-    border-right: 1px solid rgba($white, .3);
-    border-bottom: 1px solid rgba($white, .3);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    border-top: $one-border;
+    border-left: $one-border;
+    border-bottom: $one-border;
+    border-right: $one-border;
   }
 
   .cell-8 {
     grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 8;
-    grid-row-end: 11;
-    border-left: 1px solid rgba($white, .3);
-    border-bottom: 1px solid rgba($white, .3);
-    border-right: none;
-  }
-
-  .cell-9 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 9;
-    grid-row-end: 11;
-    border-left: 1px solid rgba($white, .3);
-    border-top: 1px solid rgba($white, .3);
-    border-bottom: 1px solid rgba($white, .3);
-    border-right: none;
-  }
-
-  .cell-10 {
-    grid-column-start: 1;
     grid-column-end: 5;
-    grid-row-start: 11;
-    grid-row-end: 12;
+    grid-row-start: 10;
+    grid-row-end: 11;
   }
 }

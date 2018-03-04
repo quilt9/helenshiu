@@ -61,8 +61,8 @@ h1 {
   @extend %title-font;
   display: inline;
   background-color: rgba($primary-dark, .3);
-  margin-left: -15px;
-  padding: 3%;
+  //margin-left: -15px;
+  //padding: 3%;
   color: $white;
 }
 
@@ -74,12 +74,7 @@ a {
   text-decoration: none;
 }
 
-a.overlay,
-{
-  display: block;
-  height: 100%;
-  width: 100%;
-}
+
 
 img {
     width: 100%;
@@ -88,6 +83,26 @@ img {
 
 .container {
   padding: 0 25px 25px 25px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container > h1 {
+  text-align: center;
+}
+
+.flex-container > a {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .mono {
