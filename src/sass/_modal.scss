@@ -87,9 +87,9 @@ input{display:none}
 #slide4-wd:checked ~ #slides-wd .inner{margin-left:-300%}
 #slide5-wd:checked ~ #slides-wd .inner{margin-left:-400%}
 #slide1-info:checked ~ #slides-info .inner{margin-left:0}
-#slide2-info:checked ~ #slides-info .inner{margin-left:-125%}
-#slide3-info:checked ~ #slides-info .inner{margin-left:-250%}
-#slide4-info:checked ~ #slides-info .inner{margin-left:-375%}
+#slide2-info:checked ~ #slides-info .inner{margin-left:-100%}
+#slide3-info:checked ~ #slides-info .inner{margin-left:-200%}
+#slide4-info:checked ~ #slides-info .inner{margin-left:-300%}
 #container{width:100%;overflow:hidden;}
 article img{max-width:100%;height: auto;width:auto;max-height:90%;}
 #slides-gd .inner{width:500%;line-height:0;}
@@ -98,7 +98,7 @@ article img{max-width:100%;height: auto;width:auto;max-height:90%;}
 #slides-wd article{width:20%;float:left;}
 #slides-dev .inner{width:500%;line-height:0;}
 #slides-dev article{width:20%;float:left;}
-#slides-info .inner{width:500%;line-height:0;}
+#slides-info .inner{width:400%;line-height:0;}
 #slides-info article{width:25%;float:left;}
 #commands-gd{
   margin:0 0 0 0;

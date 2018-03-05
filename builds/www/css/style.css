@@ -440,15 +440,15 @@ input {
 }
 
 #slide2-info:checked ~ #slides-info .inner {
-  margin-left: -125%;
+  margin-left: -100%;
 }
 
 #slide3-info:checked ~ #slides-info .inner {
-  margin-left: -250%;
+  margin-left: -200%;
 }
 
 #slide4-info:checked ~ #slides-info .inner {
-  margin-left: -375%;
+  margin-left: -300%;
 }
 
 #container {
@@ -494,7 +494,7 @@ article img {
 }
 
 #slides-info .inner {
-  width: 500%;
+  width: 400%;
   line-height: 0;
 }
 
