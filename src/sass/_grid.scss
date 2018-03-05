@@ -146,6 +146,8 @@ $one-border: 1px solid rgba($white, .3);
   @extend %four-column;
   @extend %left-right-bottom;
   position: relative;
+  background-image: url('/img/info_hp.jpg');
+  @extend %grid-bkbg;
 }
 
 .cell-6 {
