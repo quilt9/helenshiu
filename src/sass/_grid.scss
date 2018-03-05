@@ -156,6 +156,12 @@ $one-border: 1px solid rgba($white, .3);
 
 .cell-7 {
   @extend %four-column;
+  @extend %left-right-bottom;
+  position: relative;
+}
+
+.cell-8 {
+  @extend %four-column;
   @extend %top-left-right-bottom;
   position: relative;
 }
@@ -220,6 +226,17 @@ footer {
 
   .cell-5 {
     grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 9;
+    border-top: $one-border;
+    border-left: $one-border;
+    border-bottom: $one-border;
+    border-right: $one-border;
+  }
+
+  .cell-6 {
+    grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 7;
     grid-row-end: 10;
@@ -229,20 +246,9 @@ footer {
     border-right: $one-border;
   }
 
-  .cell-6 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 9;
-    grid-row-end: 10;
-    border-top: $one-border;
-    border-left: $one-border;
-    border-bottom: $one-border;
-    border-right: $one-border;
-  }
-
   .cell-7 {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row-start: 9;
     grid-row-end: 10;
     border-top: $one-border;
