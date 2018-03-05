@@ -435,6 +435,26 @@ input {
   margin-left: -400%;
 }
 
+#slide1-dev:checked ~ #slides-dev .inner {
+  margin-left: 0;
+}
+
+#slide2-dev:checked ~ #slides-dev .inner {
+  margin-left: -100%;
+}
+
+#slide3-dev:checked ~ #slides-dev .inner {
+  margin-left: -200%;
+}
+
+#slide4-dev:checked ~ #slides-dev .inner {
+  margin-left: -300%;
+}
+
+#slide5-dev:checked ~ #slides-dev .inner {
+  margin-left: -400%;
+}
+
 #slide1-info:checked ~ #slides-info .inner {
   margin-left: 0;
 }
