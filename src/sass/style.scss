@@ -74,9 +74,12 @@ a {
   text-decoration: none;
 }
 
-
-
 img {
+    width: 100%;
+    height: auto;
+}
+
+video {
     width: 100%;
     height: auto;
 }
@@ -121,6 +124,25 @@ img {
   display: none;
 }
 
+.motion-container {
+  padding-top: 2%;
+}
+
+video.geminare {
+  max-width: 508px;
+  max-height: 300px;
+}
+
+video.linkpro {
+  max-width: 752px;
+  max-height: 240px;
+}
+
+video.bee {
+  max-width: 750px;
+  max-height: 562px;
+}
+
 
 /* media query
 =============================================== */
@@ -134,11 +156,6 @@ img {
     top: 45%;
   }
 
-.mobile-message {
-    display: block;
-  }
-
-
   /* fonts
   =============================================== */
   h1 {
@@ -148,5 +165,18 @@ img {
   p, .text {
     font-size: 1em;
   }
+
+  .caption {
+    z-index: 1;
+  }
+
+  .mobile-message {
+      display: block;
+    }
+
+  #slides-motion {
+    height: 75vh;
+  }
+
 }
 

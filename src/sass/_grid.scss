@@ -160,11 +160,12 @@ $one-border: 1px solid rgba($white, .3);
   @extend %four-column;
   @extend %left-right-bottom;
   position: relative;
+  background-image: url('/img/motion_hp.jpg');
+  @extend %grid-bkbg;
 }
 
 .cell-8 {
   @extend %four-column;
-  @extend %top-left-right-bottom;
   position: relative;
 }
 

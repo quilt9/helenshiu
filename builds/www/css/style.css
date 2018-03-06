@@ -28,7 +28,7 @@ $test: rgba(175, 217, 22, 1);
   grid-column-end: 5;
 }
 
-.cell-3, .cell-8 {
+.cell-3 {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-right: 1px solid rgba(255, 255, 255, 0.3);
@@ -47,7 +47,7 @@ $test: rgba(175, 217, 22, 1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.cell-2, .cell-3, .cell-5 {
+.cell-2, .cell-3, .cell-5, .cell-7 {
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -92,6 +92,7 @@ $test: rgba(175, 217, 22, 1);
 
 .cell-7 {
   position: relative;
+  background-image: url("/img/motion_hp.jpg");
 }
 
 .cell-8 {
@@ -377,7 +378,8 @@ label,
 #active-wd,
 #active-dev,
 #active-info,
-#active-dm
+#active-dm,
+#active-motion
 img {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -389,7 +391,8 @@ img {
 #slider-wd,
 #slider-dev,
 #slider-info,
-#slider-dm {
+#slider-dm,
+#slider-motion {
   margin: 0 auto;
 }
 
@@ -505,6 +508,26 @@ input {
   margin-left: -700%;
 }
 
+#slide1-motion:checked ~ #slides-motion .inner {
+  margin-left: 0;
+}
+
+#slide2-motion:checked ~ #slides-motion .inner {
+  margin-left: -100%;
+}
+
+#slide3-motion:checked ~ #slides-motion .inner {
+  margin-left: -200%;
+}
+
+#slide4-motion:checked ~ #slides-motion .inner {
+  margin-left: -300%;
+}
+
+#slide5-motion:checked ~ #slides-motion .inner {
+  margin-left: -400%;
+}
+
 #container {
   width: 100%;
   overflow: hidden;
@@ -564,6 +587,16 @@ article img {
 
 #slides-dm article {
   width: 12.5%;
+  float: left;
+}
+
+#slides-motion .inner {
+  width: 500%;
+  line-height: 0;
+}
+
+#slides-motion article {
+  width: 20%;
   float: left;
 }
 
@@ -649,6 +682,23 @@ article img {
 }
 
 #commands-dm label:hover {
+  opacity: 0.8;
+}
+
+#commands-motion {
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 0px;
+  z-index: 1;
+}
+
+#commands-motion label {
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+}
+
+#commands-motion label:hover {
   opacity: 0.8;
 }
 
@@ -887,6 +937,53 @@ article img {
   margin: 1em 0;
 }
 
+#active-motion {
+  position: relative;
+  z-index: 5;
+  margin: 10% 0 0;
+  text-align: center;
+}
+
+#active-motion label {
+  border-radius: 5px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #bbb;
+}
+
+#active-motion label:hover {
+  background: #fff;
+  border-color: #777 !important;
+}
+
+#slide1-motion:checked ~ #commands-motion label:nth-child(2), #slide2-motion:checked ~ #commands-motion label:nth-child(3), #slide3-motion:checked ~ #commands-motion label:nth-child(4), #slide4-motion:checked ~ #commands-motion label:nth-child(5), #slide5-motion:checked ~ #commands-motion label:nth-child(1) {
+  background: url("/img/next.png") no-repeat;
+  float: right;
+  margin: 0 12px 0 0;
+  display: block;
+}
+
+#slide1-motion:checked ~ #commands-motion label:nth-child(5), #slide2-motion:checked ~ #commands-motion label:nth-child(1), #slide3-motion:checked ~ #commands-motion label:nth-child(2), #slide4-motion:checked ~ #commands-motion label:nth-child(3), #slide5-motion:checked ~ #commands-motion label:nth-child(4) {
+  background: url("/img/previouspng.png") no-repeat;
+  float: left;
+  margin: 0 0 0 -6px;
+  display: block;
+}
+
+#slide1-motion:checked ~ #active-motion label:nth-child(1), #slide2-motion:checked ~ #active-motion label:nth-child(2), #slide3-motion:checked ~ #active-motion label:nth-child(3), #slide4-motion:checked ~ #active-motion label:nth-child(4), #slide5-motion:checked ~ #active-motion label:nth-child(5) {
+  background: #000;
+  opacity: 0.6;
+  border-color: #fff !important;
+  border: 2px solid #fff;
+}
+
+#slides-motion {
+  position: relative;
+  padding: 2px;
+  margin: 1em 0;
+}
+
 .caption {
   line-height: 20px;
   margin: 0 0 -150%;
@@ -1076,6 +1173,38 @@ h3.text {
   max-width: 960px;
 }
 
+#slides-motion .inner {
+  -webkit-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+       -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+          transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#slider-motion {
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#commands-motion label {
+  -webkit-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+#slide1-motion:checked ~ #slides-motion article:nth-child(1) .caption, #slide2-motion:checked ~ #slides-motion article:nth-child(2) .caption, #slide3-motion:checked ~ #slides-motion article:nth-child(3) .caption, #slide4-motion:checked ~ #slides-motion article:nth-child(4) .caption, #slide5-motion:checked ~ #slides-motion article:nth-child(5) .caption {
+  opacity: 1;
+  -webkit-transition: all 1s ease-out 0.6s;
+  -o-transition: all 1s ease-out 0.6s;
+  transition: all 1s ease-out 0.6s;
+}
+
+#slider-motion {
+  max-width: 960px;
+}
+
 .mobile-message {
   display: none;
 }
@@ -1100,7 +1229,8 @@ h3.text {
   #commands-wd,
   #commands-dev,
   #commands-info,
-  #commands-dm {
+  #commands-dm,
+  #commands-motion {
     height: 50px;
   }
 
@@ -1108,7 +1238,8 @@ h3.text {
   #active-wd,
   #active-dev,
   #active-info,
-  #active-dm {
+  #active-dm,
+  #active-motion {
     width: 30%;
     margin: -5% auto;
   }
@@ -1178,6 +1309,11 @@ img {
   height: auto;
 }
 
+video {
+  width: 100%;
+  height: auto;
+}
+
 .container {
   padding: 0 25px 25px 25px;
 }
@@ -1227,6 +1363,25 @@ img {
   display: none;
 }
 
+.motion-container {
+  padding-top: 2%;
+}
+
+video.geminare {
+  max-width: 508px;
+  max-height: 300px;
+}
+
+video.linkpro {
+  max-width: 752px;
+  max-height: 240px;
+}
+
+video.bee {
+  max-width: 750px;
+  max-height: 562px;
+}
+
 /* media query
 =============================================== */
 @media (min-width: 768px) {
@@ -1238,10 +1393,6 @@ img {
     top: 45%;
   }
 
-  .mobile-message {
-    display: block;
-  }
-
   /* fonts
   =============================================== */
   h1 {
@@ -1250,6 +1401,18 @@ img {
 
   p, .text {
     font-size: 1em;
+  }
+
+  .caption {
+    z-index: 1;
+  }
+
+  .mobile-message {
+    display: block;
+  }
+
+  #slides-motion {
+    height: 75vh;
   }
 }
 

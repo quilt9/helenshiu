@@ -64,7 +64,8 @@ label,
 #active-wd,
 #active-dev,
 #active-info,
-#active-dm
+#active-dm,
+#active-motion
 img{
   -moz-user-select:none;
   -webkit-user-select:none;
@@ -74,7 +75,8 @@ img{
 #slider-wd,
 #slider-dev,
 #slider-info,
-#slider-dm{
+#slider-dm,
+#slider-motion{
   margin:0 auto
 }
 input{display:none}
@@ -105,6 +107,11 @@ input{display:none}
 #slide6-dm:checked ~ #slides-dm .inner{margin-left:-500%}
 #slide7-dm:checked ~ #slides-dm .inner{margin-left:-600%}
 #slide8-dm:checked ~ #slides-dm .inner{margin-left:-700%}
+#slide1-motion:checked ~ #slides-motion .inner{margin-left:0}
+#slide2-motion:checked ~ #slides-motion .inner{margin-left:-100%}
+#slide3-motion:checked ~ #slides-motion .inner{margin-left:-200%}
+#slide4-motion:checked ~ #slides-motion .inner{margin-left:-300%}
+#slide5-motion:checked ~ #slides-motion .inner{margin-left:-400%}
 #container{width:100%;overflow:hidden;}
 article img{max-width:100%;height: auto;width:auto;max-height:90%;}
 #slides-gd .inner{width:500%;line-height:0;}
@@ -117,6 +124,8 @@ article img{max-width:100%;height: auto;width:auto;max-height:90%;}
 #slides-info article{width:25%;float:left;}
 #slides-dm .inner{width:800%;line-height:0;}
 #slides-dm article{width:12.5%;float:left;}
+#slides-motion .inner{width:500%;line-height:0;}
+#slides-motion article{width:20%;float:left;}
 #commands-gd{
   margin:0 0 0 0;
   width:100%;
@@ -157,6 +166,14 @@ article img{max-width:100%;height: auto;width:auto;max-height:90%;}
 }
 #commands-dm label{width:80px;height:80px;opacity:0.5;}
 #commands-dm label:hover{opacity:0.8}
+#commands-motion{
+  margin:0 0 0 0;
+  width:100%;
+  height:0px;
+  z-index: 1;
+}
+#commands-motion label{width:80px;height:80px;opacity:0.5;}
+#commands-motion label:hover{opacity:0.8}
 #active-gd{position:relative;z-index:5;margin:10% 0 0;text-align:center}
 #active-gd label{border-radius:5px;display:inline-block;width:10px;height:10px;background:#bbb}
 #active-gd label:hover{background:#fff;border-color:#777!important}
@@ -192,6 +209,13 @@ article img{max-width:100%;height: auto;width:auto;max-height:90%;}
 #slide1-dm:checked ~ #commands-dm label:nth-child(8),#slide2-dm:checked ~ #commands-dm label:nth-child(1),#slide3-dm:checked ~ #commands-dm label:nth-child(2),#slide4-dm:checked ~ #commands-dm label:nth-child(3),#slide5-dm:checked ~ #commands-dm label:nth-child(4),#slide6-dm:checked ~ #commands-dm label:nth-child(5),#slide7-dm:checked ~ #commands-dm label:nth-child(6),#slide8-dm:checked ~ #commands-dm label:nth-child(7){background:url('/img/previouspng.png') no-repeat;float:left;margin:0 0 0 -6px;display:block}
 #slide1-dm:checked ~ #active-dm label:nth-child(1),#slide2-dm:checked ~ #active-dm label:nth-child(2),#slide3-dm:checked ~ #active-dm label:nth-child(3),#slide4-dm:checked ~ #active-dm label:nth-child(4),#slide5-dm:checked ~ #active-dm label:nth-child(5),#slide6-dm:checked ~ #active-dm label:nth-child(6),#slide7-dm:checked ~ #active-dm label:nth-child(7),#slide8-dm:checked ~ #active-dm label:nth-child(8){background:#000;opacity:0.6;border-color:#fff!important;border:2px solid #fff}
 #slides-dm{position:relative;padding:2px;margin:1em 0}
+#active-motion{position:relative;z-index:5;margin:10% 0 0;text-align:center}
+#active-motion label{border-radius:5px;display:inline-block;width:10px;height:10px;background:#bbb}
+#active-motion label:hover{background:#fff;border-color:#777!important}
+#slide1-motion:checked ~ #commands-motion label:nth-child(2),#slide2-motion:checked ~ #commands-motion label:nth-child(3),#slide3-motion:checked ~ #commands-motion label:nth-child(4),#slide4-motion:checked ~ #commands-motion label:nth-child(5),#slide5-motion:checked ~ #commands-motion label:nth-child(1){background:url('/img/next.png') no-repeat;float:right;margin:0 12px 0 0;display:block}
+#slide1-motion:checked ~ #commands-motion label:nth-child(5),#slide2-motion:checked ~ #commands-motion label:nth-child(1),#slide3-motion:checked ~ #commands-motion label:nth-child(2),#slide4-motion:checked ~ #commands-motion label:nth-child(3),#slide5-motion:checked ~ #commands-motion label:nth-child(4){background:url('/img/previouspng.png') no-repeat;float:left;margin:0 0 0 -6px;display:block}
+#slide1-motion:checked ~ #active-motion label:nth-child(1),#slide2-motion:checked ~ #active-motion label:nth-child(2),#slide3-motion:checked ~ #active-motion label:nth-child(3),#slide4-motion:checked ~ #active-motion label:nth-child(4),#slide5-motion:checked ~ #active-motion label:nth-child(5){background:#000;opacity:0.6;border-color:#fff!important;border:2px solid #fff}
+#slides-motion{position:relative;padding:2px;margin:1em 0}
 .caption{line-height:20px;margin:0 0 -150%;position:absolute;top:45%;padding:0px;opacity:0;color:#fff;text-transform:none;font-family:'Roboto', sans-serif;text-align:left;font-size:.8em;}
 .caption bar{display:inline-block;padding:10px;background:#000;border-radius:3px 3px 3px 3px;opacity:0.7;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70)}
 h3.text {
@@ -224,6 +248,11 @@ h3.text {
 #commands-dm label{transition:opacity 0.2s ease-out;}
 #slide1-dm:checked ~ #slides-dm article:nth-child(1) .caption,#slide2-dm:checked ~ #slides-dm article:nth-child(2) .caption,#slide3-dm:checked ~ #slides-dm article:nth-child(3) .caption,#slide4-dm:checked ~ #slides-dm article:nth-child(4) .caption,#slide5-dm:checked ~ #slides-dm article:nth-child(5) .caption,#slide6-dm:checked ~ #slides-dm article:nth-child(6) .caption,#slide7-dm:checked ~ #slides-dm article:nth-child(7) .caption,#slide8-dm:checked ~ #slides-dm article:nth-child(8) .caption{opacity:1;transition:all 1s ease-out 0.6s}
 #slider-dm{max-width:960px}
+#slides-motion .inner{transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);}
+#slider-motion{transition:all 0.5s ease-out;}
+#commands-motion label{transition:opacity 0.2s ease-out;}
+#slide1-motion:checked ~ #slides-motion article:nth-child(1) .caption,#slide2-motion:checked ~ #slides-motion article:nth-child(2) .caption,#slide3-motion:checked ~ #slides-motion article:nth-child(3) .caption,#slide4-motion:checked ~ #slides-motion article:nth-child(4) .caption,#slide5-motion:checked ~ #slides-motion article:nth-child(5) .caption{opacity:1;transition:all 1s ease-out 0.6s}
+#slider-motion{max-width:960px}
 
 .mobile-message {
   display: none;
@@ -248,14 +277,16 @@ h3.text {
   #commands-wd,
   #commands-dev,
   #commands-info,
-  #commands-dm{
+  #commands-dm,
+  #commands-motion{
     height:50px;
   }
   #active-gd,
   #active-wd,
   #active-dev,
   #active-info,
-  #active-dm{
+  #active-dm,
+  #active-motion{
     width: 30%;
     margin:-5% auto;
   }
