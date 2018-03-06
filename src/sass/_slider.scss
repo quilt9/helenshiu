@@ -24,12 +24,12 @@
 	position: absolute;
   top: 0;
   left: 0;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: left bottom;
 	z-index: 0;
   opacity: 0;
-  animation: fade-out 15s infinite both;
+  animation: fade-out 30s infinite both;
 }
 
 .cell-1 ul.recent-works li:nth-child(1) {
@@ -38,27 +38,27 @@
   @media (min-width: 58em) {
     .cell-1 ul.recent-works li:nth-child(1) {
     background-image: url(/img/2400x500_1.png);
-    background-position: 50%;
+    background-position: left bottom;
     }
 }
 
 .cell-1 ul.recent-works li:nth-child(2) {
   background-image: url(/img/2400x500_2.png);
-  animation-delay: 10s; }
+  animation-delay: 15s; }
   @media (min-width: 58em) {
     .cell-1 ul.recent-works li:nth-child(2) {
     background-image: url(/img/2400x500_2.png);
-    background-position: 50%;
+    background-position: left bottom;
     }
 }
 
 .cell-1 ul.recent-works li:nth-child(3) {
   background-image: url(/img/2400x500_3.png);
-  animation-delay: 15s; }
+  animation-delay: 25s; }
   @media (min-width: 58em) {
     .cell-1 ul.recent-works li:nth-child(3) {
       background-image: url(/img/2400x500_3.png);
-      background-position: 50%;
+      background-position: left bottom;
       }
     }
 

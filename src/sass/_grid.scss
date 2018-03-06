@@ -124,14 +124,14 @@ $one-border: 1px solid rgba($white, .3);
   @extend %four-column;
   @extend %top-left-right;
   position: relative;
-  background-image: url('/img/gd_hp_900x900.jpg');
+  background-image: url('/img/gd_hp.jpg');
   @extend %grid-bkbg;
 }
 
 .cell-3 {
   @extend %four-column;
   @extend %top-left-right-bottom;
-  background-image: url('/img/web_hp_900x900.jpg');
+  background-image: url('/img/wd_hp.jpg');
   @extend %grid-bkbg;
   position: relative;
 }
@@ -139,6 +139,8 @@ $one-border: 1px solid rgba($white, .3);
 .cell-4 {
   @extend %four-column;
   @extend %left-right-bottom;
+  background-image: url('/img/dev_hp.jpg');
+  @extend %grid-bkbg;
   position: relative;
 }
 
@@ -153,6 +155,8 @@ $one-border: 1px solid rgba($white, .3);
 .cell-6 {
   @extend %four-column;
   @extend %left-right-bottom;
+  background-image: url('/img/dm_hp.jpg');
+  @extend %grid-bkbg;
   position: relative;
 }
 
@@ -162,11 +166,6 @@ $one-border: 1px solid rgba($white, .3);
   position: relative;
   background-image: url('/img/motion_hp.jpg');
   @extend %grid-bkbg;
-}
-
-.cell-8 {
-  @extend %four-column;
-  position: relative;
 }
 
 footer {
