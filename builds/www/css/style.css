@@ -1062,15 +1062,15 @@ article img {
 
 .caption {
   line-height: 20px;
-  margin: 0 0 -150%;
+  margin: 0 0 0%;
   position: absolute;
-  top: 45%;
+  bottom: 0%;
   padding: 0px;
   opacity: 0;
   color: #fff;
   text-transform: none;
   font-family: 'Roboto', sans-serif;
-  text-align: left;
+  text-align: center;
   font-size: .8em;
 }
 
@@ -1461,7 +1461,14 @@ video {
   width: 100%;
 }
 
-.caption bar,
+.caption {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caption bar a,
 .blue {
   color: #0fd5e0;
 }

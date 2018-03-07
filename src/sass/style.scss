@@ -109,7 +109,14 @@ video {
   width: 100%;
 }
 
-.caption bar,
+.caption {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caption bar a,
 .blue {
   color: $secondary-blue;
 }
