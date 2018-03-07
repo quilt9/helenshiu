@@ -116,8 +116,8 @@ $one-border: 1px solid rgba($white, .3);
 /* cells */
 .cell-1 {
 	@extend %four-column;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .cell-2 {
@@ -176,11 +176,15 @@ $one-border: 1px solid rgba($white, .3);
   @extend %grid-bkbg;
 }
 
-footer {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
+.cell-9 {
+  @extend %four-column;
+  //@extend %left-right-bottom;
+}
+
+.cell-10 {
+  @extend %four-column;
+  //grid-row-start: 1;
+  //grid-row-end: 2;
 }
 
 /* media query */
@@ -280,6 +284,13 @@ footer {
 
   .cell-9 {
     grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 11;
+  }
+
+  .cell-10 {
+    grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 10;
     grid-row-end: 11;

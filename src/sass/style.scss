@@ -22,6 +22,7 @@ $heading: 'Roboto Mono', monospace;
 $font-family: 'Roboto', sans-serif;
 $font-size: 100%;
 $heading-size: 1.25em;
+$smaller: .75em;
 
 /* Extend
 =============================================== */
@@ -83,6 +84,10 @@ img {
 video {
     width: 100%;
     height: auto;
+}
+
+footer {
+  padding: 5%;
 }
 
 .container {
@@ -152,6 +157,73 @@ video.bee {
   max-height: 562px;
 }
 
+.contact::before {
+  content: "\0040";    /* Unicode character for @ symbol */
+}
+
+/* header
+=============================================== */
+.cell-1 .sldier-text h1.header-title {
+  font-size: 1.25em;
+  background-color: transparent;
+}
+
+p.sldier-text {
+  font-size: .8em;
+  color: $white;
+}
+
+/* button
+=============================================== */
+.button {
+  background-color: $secondary-blue;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 2%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -1px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 10px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* footer
+=============================================== */
+.footer {
+  padding-top: 15px;
+}
+
+.footer h1 {
+  background-color: transparent;
+  color: $secondary-dark;
+}
+
+.footer p {
+  color: lighten($secondary-dark, 20%);
+}
 
 /* media query
 =============================================== */
@@ -162,7 +234,29 @@ video.bee {
   .cell-1 .sldier-text h1.header-title {
     font-size: 2em;
     position: absolute;
-    top: 45%;
+    top: 20%;
+  }
+
+  p.sldier-text {
+    position: absolute;
+    top: 40%;
+    font-size: 1.2em;
+  }
+  
+  .button {
+    padding: 5%;
+  }
+
+  .footer h1 {
+    color: $white;
+  }
+
+  .smaller-font {
+    font-size: $smaller;
+  }
+
+  .hide {
+    display: none;
   }
 
   /* fonts
