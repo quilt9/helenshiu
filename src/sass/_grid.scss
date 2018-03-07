@@ -122,7 +122,7 @@ $one-border: 1px solid rgba($white, .3);
 
 .cell-2 {
   @extend %four-column;
-  @extend %top-left-right;
+  //@extend %top-left-right;
   position: relative;
   background-image: url('/img/gd_hp.jpg');
   @extend %grid-bkbg;
@@ -130,7 +130,7 @@ $one-border: 1px solid rgba($white, .3);
 
 .cell-3 {
   @extend %four-column;
-  @extend %top-left-right-bottom;
+  //@extend %top-left-right-bottom;
   background-image: url('/img/wd_hp.jpg');
   @extend %grid-bkbg;
   position: relative;
@@ -138,7 +138,7 @@ $one-border: 1px solid rgba($white, .3);
 
 .cell-4 {
   @extend %four-column;
-  @extend %left-right-bottom;
+  //@extend %left-right-bottom;
   background-image: url('/img/dev_hp.jpg');
   @extend %grid-bkbg;
   position: relative;
@@ -146,7 +146,7 @@ $one-border: 1px solid rgba($white, .3);
 
 .cell-5 {
   @extend %four-column;
-  @extend %left-right-bottom;
+  //@extend %left-right-bottom;
   position: relative;
   background-image: url('/img/info_hp.jpg');
   @extend %grid-bkbg;
@@ -154,7 +154,7 @@ $one-border: 1px solid rgba($white, .3);
 
 .cell-6 {
   @extend %four-column;
-  @extend %left-right-bottom;
+  //@extend %left-right-bottom;
   background-image: url('/img/dm_hp.jpg');
   @extend %grid-bkbg;
   position: relative;
@@ -162,7 +162,15 @@ $one-border: 1px solid rgba($white, .3);
 
 .cell-7 {
   @extend %four-column;
-  @extend %left-right-bottom;
+  //@extend %left-right-bottom;
+  position: relative;
+  background-image: url('/img/motion_hp.jpg');
+  @extend %grid-bkbg;
+}
+
+.cell-8 {
+  @extend %four-column;
+  //@extend %left-right-bottom;
   position: relative;
   background-image: url('/img/motion_hp.jpg');
   @extend %grid-bkbg;
@@ -198,10 +206,10 @@ footer {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 6;
-    border-top: $one-border;
-    border-left: $one-border;
-    border-bottom: $one-border;
-    border-right: none;
+    //border-top: $one-border;
+    //border-left: $one-border;
+    //border-bottom: $one-border;
+    //border-right: none;
   }
 
   .cell-3 {
@@ -209,10 +217,10 @@ footer {
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 7;
-    border-top: $one-border;
-    border-left: $one-border;
-    border-bottom: $one-border;
-    border-right: $one-border;
+    //border-top: $one-border;
+    //border-left: $one-border;
+    //border-bottom: $one-border;
+    //border-right: $one-border;
   }
 
   .cell-4 {
@@ -220,10 +228,10 @@ footer {
     grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 9;
-    border-top: $one-border;
-    border-left: $one-border;
-    border-bottom: $one-border;
-    border-right: $one-border;
+    //border-top: $one-border;
+    //border-left: $one-border;
+    //border-bottom: $one-border;
+    //border-right: $one-border;
   }
 
   .cell-5 {
@@ -231,21 +239,21 @@ footer {
     grid-column-end: 4;
     grid-row-start: 7;
     grid-row-end: 9;
-    border-top: $one-border;
-    border-left: $one-border;
-    border-bottom: $one-border;
-    border-right: $one-border;
+    //border-top: $one-border;
+    //border-left: $one-border;
+    //border-bottom: $one-border;
+    //border-right: $one-border;
   }
 
   .cell-6 {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 7;
-    grid-row-end: 10;
-    border-top: $one-border;
-    border-left: $one-border;
-    border-bottom: $one-border;
-    border-right: $one-border;
+    grid-row-end: 8;
+    //border-top: $one-border;
+    //border-left: $one-border;
+    //border-bottom: $one-border;
+    //border-right: $one-border;
   }
 
   .cell-7 {
@@ -253,13 +261,24 @@ footer {
     grid-column-end: 4;
     grid-row-start: 9;
     grid-row-end: 10;
-    border-top: $one-border;
-    border-left: $one-border;
-    border-bottom: $one-border;
-    border-right: $one-border;
+    //border-top: $one-border;
+    //border-left: $one-border;
+    //border-bottom: $one-border;
+    //border-right: $one-border;
   }
 
   .cell-8 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 10;
+    //border-top: $one-border;
+    //border-left: $one-border;
+    //border-bottom: $one-border;
+    //border-right: $one-border;
+  }
+
+  .cell-9 {
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 10;

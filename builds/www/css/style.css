@@ -23,31 +23,12 @@ $test: rgba(175, 217, 22, 1);
   margin: 50px auto;
 }
 
-.cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7 {
+.cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .cell-8 {
   grid-column-start: 1;
   grid-column-end: 5;
 }
 
-.cell-3 {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.cell-2 {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.cell-4, .cell-5, .cell-6, .cell-7 {
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7 {
+.cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .cell-8 {
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -97,6 +78,11 @@ $test: rgba(175, 217, 22, 1);
   background-image: url("/img/motion_hp.jpg");
 }
 
+.cell-8 {
+  position: relative;
+  background-image: url("/img/motion_hp.jpg");
+}
+
 footer {
   grid-column-start: 1;
   grid-column-end: 5;
@@ -126,10 +112,6 @@ footer {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 6;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: none;
   }
 
   .cell-3 {
@@ -137,10 +119,6 @@ footer {
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 7;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .cell-4 {
@@ -148,10 +126,6 @@ footer {
     grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 9;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .cell-5 {
@@ -159,21 +133,13 @@ footer {
     grid-column-end: 4;
     grid-row-start: 7;
     grid-row-end: 9;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .cell-6 {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 7;
-    grid-row-end: 10;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    grid-row-end: 8;
   }
 
   .cell-7 {
@@ -181,13 +147,16 @@ footer {
     grid-column-end: 4;
     grid-row-start: 9;
     grid-row-end: 10;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .cell-8 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 10;
+  }
+
+  .cell-9 {
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 10;
@@ -195,14 +164,9 @@ footer {
   }
 }
 .cell-1 {
-  test-align: center;
   width: 100%;
   height: auto;
   text-align: left;
-  position: relative;
-}
-
-.cell-1 .sldier-text {
   position: relative;
 }
 
@@ -236,8 +200,8 @@ footer {
 
 .cell-1 ul.recent-works li:nth-child(1) {
   background-image: url(/img/2400x500_1.png);
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 @media (min-width: 58em) {
@@ -248,8 +212,8 @@ footer {
 }
 .cell-1 ul.recent-works li:nth-child(2) {
   background-image: url(/img/2400x500_2.png);
-  -webkit-animation-delay: 15s;
-          animation-delay: 15s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
 }
 
 @media (min-width: 58em) {
@@ -260,8 +224,8 @@ footer {
 }
 .cell-1 ul.recent-works li:nth-child(3) {
   background-image: url(/img/2400x500_3.png);
-  -webkit-animation-delay: 25s;
-          animation-delay: 25s;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
 }
 
 @media (min-width: 58em) {
@@ -1299,7 +1263,7 @@ p, .text {
 }
 
 a {
-  text-decoration: none;
+  color: #90f2f8;
 }
 
 img {
@@ -1345,6 +1309,7 @@ video {
   width: 100%;
 }
 
+.caption bar,
 .blue {
   color: #0fd5e0;
 }
