@@ -1401,9 +1401,9 @@ $white: rgba(255, 255, 255, 1);
 =============================================== */
 body {
   background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(/img/star-bg.svg), -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.9) 100%);
-  background-image: url(/img/star-bg.svg), -o-linear-gradient(135deg, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.9) 100%);
-  background-image: url(/img/star-bg.svg), linear-gradient(-45deg, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: url(/img/star-bg.svg), -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0.2) 30%, rgba(153, 146, 140, 0.8) 100%);
+  background-image: url(/img/star-bg.svg), -o-linear-gradient(135deg, rgba(0, 0, 0, 0.2) 30%, rgba(153, 146, 140, 0.8) 100%);
+  background-image: url(/img/star-bg.svg), linear-gradient(-45deg, rgba(0, 0, 0, 0.2) 30%, rgba(153, 146, 140, 0.8) 100%);
   background-repeat: no-repeat;
   background-position: center 0, 0 0, 0 0;
   -webkit-background-size: contain;
