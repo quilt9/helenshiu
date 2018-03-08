@@ -106,7 +106,7 @@ $one-border: 1px solid rgba($white, .3);
 /* main grid */
 .grid {
   @extend %main-grid;
-  grid-auto-rows: minmax(180px, auto);
+  grid-template-rows: repeat(8, 180px) 1fr 1fr;
 }
 
 .cell {
@@ -182,6 +182,12 @@ $one-border: 1px solid rgba($white, .3);
 }
 
 .cell-10 {
+  @extend %four-column;
+  //grid-row-start: 1;
+  //grid-row-end: 2;
+}
+
+.cell-11 {
   @extend %four-column;
   //grid-row-start: 1;
   //grid-row-end: 2;
@@ -292,6 +298,13 @@ $one-border: 1px solid rgba($white, .3);
   .cell-10 {
     grid-column-start: 2;
     grid-column-end: 4;
+    grid-row-start: 10;
+    grid-row-end: 11;
+  }
+
+  .cell-11 {
+    grid-column-start: 4;
+    grid-column-end: 5;
     grid-row-start: 10;
     grid-row-end: 11;
   }

@@ -23,12 +23,13 @@ $font-family: 'Roboto', sans-serif;
 $font-size: 100%;
 $heading-size: 1.25em;
 $smaller: .75em;
+$larger: 1.5em;
 
 /* Extend
 =============================================== */
 %gradient-body {
 	background-oolor: $primary-light;
-	background-image: url(/img/star-bg.svg),linear-gradient(-45deg, $primary-light 30%, $secondary-light 100%);
+	background-image: url(/img/star-bg.svg),linear-gradient(0deg, rgba($secondary-light, .8) 50%, rgba($secondary-dark, .3) 100%);
 	background-repeat: no-repeat;
   background-position: center 0, 0 0, 0 0;
   background-size: contain;
@@ -123,6 +124,10 @@ video {
   color: $secondary-blue;
 }
 
+.dark {
+  color: $secondary-dark;
+}
+
 .mono {
   font-family: $heading;
 }
@@ -212,11 +217,11 @@ p.sldier-text {
 
 .footer h1 {
   background-color: transparent;
-  color: $secondary-dark;
+  color: $white;
 }
 
 .footer p {
-  color: lighten($secondary-dark, 20%);
+  color: $white;
 }
 
 /* media query
@@ -241,12 +246,24 @@ p.sldier-text {
     padding: 5%;
   }
 
+  .footer button.button:hover span {
+    padding-right: 15px;
+  }
+
+  .footer {
+    padding-right: 25px;
+  }
+
   .footer h1 {
     color: $white;
   }
 
   .smaller-font {
     font-size: $smaller;
+  }
+
+  .larger-font {
+    font-size: $larger;
   }
 
   .hide {
@@ -256,7 +273,7 @@ p.sldier-text {
   /* fonts
   =============================================== */
   h1 {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
   p, .text {
