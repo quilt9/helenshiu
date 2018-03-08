@@ -158,7 +158,7 @@ $test: rgba(175, 217, 22, 1);
 
   .cell-10 {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 4;
     grid-row-start: 10;
     grid-row-end: 11;
   }
@@ -1353,7 +1353,7 @@ h3.text {
   }
 
   article img {
-    max-width: 90%;
+    max-width: 80%;
   }
 
   #commands-gd,
@@ -1440,15 +1440,12 @@ a {
 img {
   width: 100%;
   height: auto;
+  pointer-events: none;
 }
 
 video {
   width: 100%;
   height: auto;
-}
-
-footer {
-  padding: 5%;
 }
 
 .container {
@@ -1527,11 +1524,6 @@ video.bee {
   max-height: 562px;
 }
 
-.contact::before {
-  content: "\0040";
-  /* Unicode character for @ symbol */
-}
-
 /* header
 =============================================== */
 .cell-1 .sldier-text h1.header-title {
@@ -1590,7 +1582,7 @@ p.sldier-text {
 /* footer
 =============================================== */
 .footer {
-  padding-top: 15px;
+  padding-top: 25px;
 }
 
 .footer h1 {

@@ -126,13 +126,13 @@ module.exports = function(grunt) {
 		          selector: '[alt]',
 		          sizeList: [{
 		            cond: 'max-width: 30em',
-		            size: '50vw'
-		          },{
-		            cond: 'max-width: 64.25em',
 		            size: '100vw'
 		          },{
+		            cond: 'max-width: 50em',
+		            size: '80vw'
+		          },{
 		            cond: 'default',
-		            size: 'calc(33vw - 100px)'
+		            size: 'calc(80vw - 100px)'
 		          }]
 		        }]
 		      },

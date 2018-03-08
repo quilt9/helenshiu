@@ -79,15 +79,12 @@ a {
 img {
     width: 100%;
     height: auto;
+    pointer-events: none;
 }
 
 video {
     width: 100%;
     height: auto;
-}
-
-footer {
-  padding: 5%;
 }
 
 .container {
@@ -157,9 +154,6 @@ video.bee {
   max-height: 562px;
 }
 
-.contact::before {
-  content: "\0040";    /* Unicode character for @ symbol */
-}
 
 /* header
 =============================================== */
@@ -213,7 +207,7 @@ p.sldier-text {
 /* footer
 =============================================== */
 .footer {
-  padding-top: 15px;
+  padding-top: 25px;
 }
 
 .footer h1 {
