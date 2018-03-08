@@ -120,29 +120,29 @@ module.exports = function(grunt) {
 
 		responsive_images_extender: {
 			complete: {
-	      options: {
-	        baseDir: 'builds/www', 
-	        sizes: [{
-	          selector: '[alt]',
-	          sizeList: [{
-	            cond: 'max-width: 30em',
-	            size: '100vw'
-	          },{
-	            cond: 'max-width: 50em',
-	            size: '50vw'
-	          },{
-	            cond: 'default',
-	            size: 'calc(33vw - 100px)'
-	          }]
-	        }]
-	      },
-	      files: [{
-	        expand: true,
-	        src: ['index.html'],
-	        cwd: 'builds/www/',
-	        dest: 'builds/www/test/'
-	      }]
-	    }
+		      options: {
+		        baseDir: 'builds/www',
+		        sizes: [{
+		          selector: '[alt]',
+		          sizeList: [{
+		            cond: 'max-width: 30em',
+		            size: '100vw'
+		          },{
+		            cond: 'max-width: 50em',
+		            size: '50vw'
+		          },{
+		            cond: 'default',
+		            size: 'calc(33vw - 100px)'
+		          }]
+		        }]
+		      },
+		      files: [{
+		        expand: true,
+		        src: ['index.html'],
+		        cwd: 'builds/www/',
+		        dest: 'builds/www/test/'
+		      }]
+		    }
 		}, //responsive_images_extender
 
 		concat: {

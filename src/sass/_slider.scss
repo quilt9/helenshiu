@@ -31,8 +31,13 @@
 }
 
 .cell-1 ul.recent-works li:nth-child(1) {
-  background-image: url(/img/2400x500_1.png);
+  background-image: url(/img/2400x500_1-medium_x1.png);
   animation-delay: 0s; }
+  @media (min-width: 48em) {
+    .cell-1 ul.recent-works li:nth-child(1) {
+    background-image: url(/img/2400x500_1-xlarge_x3.png);
+    background-position: left bottom;
+    }
   @media (min-width: 58em) {
     .cell-1 ul.recent-works li:nth-child(1) {
     background-image: url(/img/2400x500_1.png);
@@ -41,19 +46,30 @@
 }
 
 .cell-1 ul.recent-works li:nth-child(2) {
-  background-image: url(/img/2400x500_2.png);
+  background-image: url(/img/2400x500_2-medium_x1.png);
   animation-delay: 10s; }
-  @media (min-width: 58em) {
+  @media (min-width: 48em) {
+    .cell-1 ul.recent-works li:nth-child(2) {
+    background-image: url(/img/2400x500_2-xlarge_x3.png);
+    background-position: left bottom;
+    }
+    @media (min-width: 58em) {
     .cell-1 ul.recent-works li:nth-child(2) {
     background-image: url(/img/2400x500_2.png);
     background-position: left bottom;
     }
-}
+  }
 
 .cell-1 ul.recent-works li:nth-child(3) {
-  background-image: url(/img/2400x500_3.png);
+  background-image: url(/img/2400x500_3-medium_x1.png);
   animation-delay: 20s; }
-  @media (min-width: 58em) {
+  @media (min-width: 48em) {
+    .cell-1 ul.recent-works li:nth-child(3) {
+      background-image: url(/img/2400x500_3-xlarge_x3.png);
+      background-position: left bottom;
+      }
+    }
+    @media (min-width: 58em) {
     .cell-1 ul.recent-works li:nth-child(3) {
       background-image: url(/img/2400x500_3.png);
       background-position: left bottom;
