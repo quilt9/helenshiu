@@ -28,8 +28,8 @@ $larger: 1.5em;
 /* Extend
 =============================================== */
 %gradient-body {
-	background-oolor: $primary-light;
-	background-image: url(/img/star-bg.svg),linear-gradient(0deg, rgba($secondary-light, .8) 50%, rgba($secondary-dark, .3) 100%);
+	background-color: rgba($primary-dark, .5);
+	background-image: url(/img/star-bg.svg),linear-gradient(-45deg, rgba($primary-dark, .3) 30%, rgba($primary-dark, .9) 100%);
 	background-repeat: no-repeat;
   background-position: center 0, 0 0, 0 0;
   background-size: contain;
