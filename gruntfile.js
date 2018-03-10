@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 				files: [{
 				expand: true,
 				cwd: 'builds/www/css',
-				src: ['style.css', '!*.min.css'],
+				src: ['*.css', '!*.min.css'],
 				dest: 'builds/www/css',
 				ext: '.min.css'
 				}]
@@ -246,6 +246,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 
 	grunt.registerTask('build', ['clean:files', 'responsive_images_extender', 'htmlmin:dist']);
 	grunt.registerTask('image', ['clean:contents', 'responsive_images', 'copy', 'imagemin']);

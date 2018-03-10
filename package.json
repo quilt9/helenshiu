@@ -12,6 +12,7 @@
     "autoprefixer": "^8.0.0",
     "colors.css": "^3.0.0",
     "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
     "grunt-bower-concat": "^1.0.0",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-concat": "^1.0.1",
@@ -32,7 +33,7 @@
   },
   "dependencies": {
     "normalize-scss": "^7.0.1",
-    "w3-css": "^4.0.4",
+    "responsively-lazy": "^2.0.2",
     "webfontloader": "^1.6.28"
   }
 }
