@@ -11,6 +11,17 @@ module.exports = function(grunt) {
 	      }
 		 }, //jshint
 
+		uglify: {
+			options: {
+			  mangle: false
+			},
+			my_target: {
+			  files: {
+			    'builds/www/js/script.min.js': ['builds/www/js/*.js', '!builds/www/js/*.min.js', '!builds/www/js/_bower.js']
+			  }
+			}
+		},	//uglify
+
 		sass: {
 			dist: {
 				options: {
@@ -234,9 +245,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('build', ['clean:files', 'responsive_images_extender', 'htmlmin:dist']);
 	grunt.registerTask('image', ['clean:contents', 'responsive_images', 'copy', 'imagemin']);
-	grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'cssmin', 'jshint', 'connect', 'watch']);
+	grunt.registerTask('default', ['htmlmin:dev', 'concat', 'sass', 'cssmin', 'jshint', 'uglify', 'connect', 'watch']);
 
 }; //wrapper function
