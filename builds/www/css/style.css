@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono");
 /* Colors
 =============================================== */
 /* colors
@@ -151,13 +152,13 @@ $test: rgba(175, 217, 22, 1);
 
   .cell-9 {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     grid-row-start: 10;
     grid-row-end: 11;
   }
 
   .cell-10 {
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 10;
     grid-row-end: 11;
@@ -1631,7 +1632,7 @@ p.sldier-text {
   }
 
   .footer {
-    padding-right: 25px;
+    padding-right: 35px;
   }
 
   .footer h1 {
