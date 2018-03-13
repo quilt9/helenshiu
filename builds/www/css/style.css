@@ -1441,6 +1441,7 @@ p, .text {
 }
 
 a {
+  text-decoration: none;
   color: #90f2f8;
 }
 
