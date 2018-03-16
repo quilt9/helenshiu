@@ -175,7 +175,7 @@ p.sldier-text {
 /* button
 =============================================== */
 .button {
-  background-color: $primary-blue;
+  background-color: lighten($secondary-blue, 30%);
   border: none;
   color: #FFFFFF;
   text-align: center;
