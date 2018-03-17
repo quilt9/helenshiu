@@ -1445,6 +1445,10 @@ a {
   color: #90f2f8;
 }
 
+a:hover {
+  color: #d0dde0;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -1551,7 +1555,7 @@ p.sldier-text {
 /* button
 =============================================== */
 .button {
-  background-color: #90f2f8;
+  background-color: #0fd5e0;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -1560,6 +1564,10 @@ p.sldier-text {
   transition: all 0.5s;
   cursor: pointer;
   padding: 2%;
+}
+
+.button:hover {
+  background-color: #d0dde0;
 }
 
 .button span {
