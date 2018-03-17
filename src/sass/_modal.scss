@@ -299,6 +299,7 @@ h3.text {
 
   .modalDialog>div {
     margin: 2% auto;
+    position: relative;
   }
   .close {
     top: 0;
@@ -308,6 +309,7 @@ h3.text {
   article img {
     max-width: 80%;
   }
+
   #commands-gd,
   #commands-wd,
   #commands-dev,
@@ -316,7 +318,11 @@ h3.text {
   #commands-motion,
   #commands-email{
     height:50px;
+    position: absolute;
+    top: 40%;
+    width: 95%;
   }
+
   #active-gd,
   #active-wd,
   #active-dev,
@@ -325,6 +331,6 @@ h3.text {
   #active-motion,
   #active-email{
     width: 30%;
-    margin:-5% auto;
+    margin:5% auto;
   }
 }
