@@ -18,6 +18,7 @@ $white: rgba(255, 255, 255, 1);
 
 /* Variables
 =============================================== */
+$fallback: Arial, sans-serif;
 $heading: 'Roboto Mono', monospace;
 $font-family: 'Roboto', sans-serif;
 $font-size: 100%;
@@ -37,15 +38,21 @@ $larger: 1.5em;
 
 /* Body */
 %title-font {
-  font-family: $heading;
+  font-family: $fallback;
   font-size: $heading-size;
   color: darken($primary-blue, 10%);
+  .wf-active & {
+    font-family: $heading;
   }
+}
 
 %body-font {
-  font-family: $font-family;
+  font-family: $fallback;
   font-size: $font-size;
   color: lighten($secondary-dark, 10%);
+  .wf-active & {
+    font-family: $font-family;
+  }
 }
 
 /* Layout
