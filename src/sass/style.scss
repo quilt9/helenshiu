@@ -184,7 +184,7 @@ p.sldier-text {
 /* button & more
 =============================================== */
 .button {
-  background-color: $secondary-blue;
+  background-color: rgba($secondary-blue, .7);
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -235,7 +235,7 @@ p.sldier-text {
 /* media query
 =============================================== */
 @media (min-width: 960px) {
-  
+
   /* header
   =============================================== */
   .cell-1 .sldier-text h1.header-title {
@@ -251,11 +251,32 @@ p.sldier-text {
     font-size: 1.15em;
     line-height: 1.5em;
   }
-  
+
+  .button {
+    padding: 5%;
+  }
+
+  .footer button.button:hover span {
+    padding-right: 15px;
+  }
+
+  .footer {
+    padding-right: 35px;
+  }
+
+  .smaller-font {
+    font-size: $smaller;
+  }
+
+  .larger-font {
+    font-size: $larger;
+    line-height: 1.75em;
+  }
+
   .hide {
     display: none;
   }
-  
+
   .mobile-message {
     display: block;
   }
