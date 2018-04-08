@@ -234,7 +234,35 @@ p.sldier-text {
 
 /* media query
 =============================================== */
-@media (min-width: 768px) {
+@media (min-width: 960px) {
+  
+  /* header
+  =============================================== */
+  .cell-1 .sldier-text h1.header-title {
+    font-size: 2em;
+    position: absolute;
+    top: 0;
+    margin: 0;
+  }
+
+  p.sldier-text {
+    position: absolute;
+    top: 10%;
+    font-size: 1.15em;
+    line-height: 1.5em;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .mobile-message {
+    display: block;
+  }
+}
+
+
+@media all and (min-width: 768px) and (max-width: 959px) {
 
   /* header
   =============================================== */
@@ -264,10 +292,6 @@ p.sldier-text {
     padding-right: 35px;
   }
 
-  .footer h1 {
-    //color: $white;
-  }
-
   .smaller-font {
     font-size: $smaller;
   }
@@ -284,7 +308,7 @@ p.sldier-text {
   /* fonts
   =============================================== */
   h1 {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 
   p, .text {
