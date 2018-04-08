@@ -3,7 +3,7 @@
 /* colors
 ===============================================
 $primary-dark: rgba(0, 0, 0, 1);
-$secondary-dark: rgba(49, 57, 35, 1);
+$secondary-dark: rgba(110, 110, 110, 1);
 $primary-blue: rgba(42, 162, 179, 1);
 $secondary-blue: rgba(15, 213, 224, 1);
 $primary-light: rgba(208, 221, 224, 1);
@@ -42,6 +42,11 @@ $test: rgba(175, 217, 22, 1);
   grid-template-rows: repeat(8, 180px) 1fr 1fr;
 }
 
+/*
+.cell {
+  overflow: hidden;
+}
+*/
 /* cells */
 .cell-1 {
   grid-row-start: 1;
@@ -51,40 +56,117 @@ $test: rgba(175, 217, 22, 1);
 .cell-2 {
   position: relative;
   background-image: url("/img/gd_hp.jpg");
+  position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.cell-2:hover {
+  -webkit-background-size: 130% 130%;
+          background-size: 130%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-position: relative;
 }
 
 .cell-3 {
   background-image: url("/img/wd_hp.jpg");
   position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.cell-3:hover {
+  -webkit-background-size: 130% 130%;
+          background-size: 130%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-position: relative;
 }
 
 .cell-4 {
   background-image: url("/img/dev_hp.jpg");
   position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.cell-4:hover {
+  -webkit-background-size: 130% 130%;
+          background-size: 130%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-position: relative;
 }
 
 .cell-5 {
   position: relative;
   background-image: url("/img/info_hp.jpg");
+  position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.cell-5:hover {
+  -webkit-background-size: 130% 130%;
+          background-size: 130%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-position: relative;
 }
 
 .cell-6 {
   background-image: url("/img/pp_hp.jpg");
   position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.cell-6:hover {
+  -webkit-background-size: 130% 130%;
+          background-size: 130%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-position: relative;
 }
 
 .cell-7 {
   position: relative;
   background-image: url("/img/motion_hp.jpg");
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.cell-7:hover {
+  -webkit-background-size: 130% 130%;
+          background-size: 130%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-position: relative;
 }
 
 .cell-8 {
   position: relative;
   background-image: url("/img/html_hp.jpg");
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.cell-8:hover {
+  -webkit-background-size: 130% 130%;
+          background-size: 130%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-position: relative;
 }
 
 /* media query */
 @media (min-width: 768px) {
+  .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .cell-8 {
+    -webkit-background-size: 120% 120%;
+            background-size: 120%;
+  }
+
   .grid {
     max-width: 1200px;
     display: grid;
@@ -1412,7 +1494,6 @@ body {
   background-position: center 0, 0 0, 0 0;
   -webkit-background-size: contain;
           background-size: contain;
-  background-blend-mode: difference;
 }
 
 /* Body */
@@ -1443,11 +1524,11 @@ h1 {
 
 h1 {
   display: inline;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 p, .text {
-  font-size: .75em;
+  font-size: .85em;
   line-height: 1.45em;
 }
 
@@ -1560,7 +1641,7 @@ video.bee {
 
 p.sldier-text {
   font-size: .8em;
-  line-height: 1.65em;
+  line-height: 1.45em;
 }
 
 /* button & more

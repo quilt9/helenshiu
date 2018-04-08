@@ -34,7 +34,6 @@ $larger: 1.5em;
 	background-repeat: no-repeat;
   background-position: center 0, 0 0, 0 0;
   background-size: contain;
-  background-blend-mode: difference;
 }
 
 /* Body */
@@ -70,11 +69,11 @@ body {
 h1 {
   @extend %title-font;
   display: inline;
-  background-color: rgba($primary-dark, .3);
+  background-color: rgba($primary-dark, .5);
 }
 
 p, .text {
-  font-size: .75em;
+  font-size: .85em;
   line-height: 1.45em;
 }
 
@@ -179,8 +178,7 @@ video.bee {
 
 p.sldier-text {
   font-size: .8em;
-  line-height: 1.65em;
-  //color: $white;
+  line-height: 1.45em;
 }
 
 /* button & more
@@ -232,10 +230,6 @@ p.sldier-text {
 
 .footer h1 {
   background-color: transparent;
-}
-
-.footer p {
-  //color: $white;
 }
 
 /* media query
