@@ -20,7 +20,7 @@ $test: rgba(175, 217, 22, 1);
   max-width: 1000px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 50px auto;
+  margin: 0px auto;
 }
 
 .cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .cell-8, .cell-9, .cell-10, .cell-11 {
@@ -178,13 +178,13 @@ $test: rgba(175, 217, 22, 1);
 }
 
 .cell-1 .sldier-text h1 {
-  -webkit-animation: fade-in ease-in-out 0s 0.5s both;
-          animation: fade-in ease-in-out 0s 0.5s both;
+  -webkit-animation: fade-in ease-in-out 1s 0.5s both;
+          animation: fade-in ease-in-out 1s 0.5s both;
 }
 
 .cell-1 .sldier-text p {
-  -webkit-animation: fade-in ease-in-out 0s 0.5s both;
-          animation: fade-in ease-in-out 0s 0.5s both;
+  -webkit-animation: fade-in ease-in-out 1s 0.5s both;
+          animation: fade-in ease-in-out 1s 0.5s both;
 }
 
 .cell-1 ul.recent-works li {
@@ -1404,21 +1404,22 @@ $white: rgba(255, 255, 255, 1);
 /* Extend
 =============================================== */
 body {
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(/img/star-bg.svg), -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0.2) 30%, rgba(153, 146, 140, 0.8) 100%);
-  background-image: url(/img/star-bg.svg), -o-linear-gradient(135deg, rgba(0, 0, 0, 0.2) 30%, rgba(153, 146, 140, 0.8) 100%);
-  background-image: url(/img/star-bg.svg), linear-gradient(-45deg, rgba(0, 0, 0, 0.2) 30%, rgba(153, 146, 140, 0.8) 100%);
+  background-image: url(/img/star-bg.svg), -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0.2) 30%, rgba(153, 146, 140, 0.8) 70%);
+  background-image: url(/img/star-bg.svg), -o-linear-gradient(135deg, rgba(0, 0, 0, 0.2) 30%, rgba(153, 146, 140, 0.8) 70%);
+  background-image: url(/img/star-bg.svg), linear-gradient(-45deg, rgba(0, 0, 0, 0.2) 30%, rgba(153, 146, 140, 0.8) 70%);
+  background-color: #207d8a;
   background-repeat: no-repeat;
   background-position: center 0, 0 0, 0 0;
   -webkit-background-size: contain;
           background-size: contain;
+  background-blend-mode: difference;
 }
 
 /* Body */
 h1 {
   font-family: Arial, sans-serif;
   font-size: 1.25em;
-  color: #207d8a;
+  color: white;
 }
 .wf-active h1 {
   font-family: "Roboto Mono", monospace;
@@ -1427,7 +1428,7 @@ h1 {
 .modalDialog font-family, body {
   font-family: Arial, sans-serif;
   font-size: 100%;
-  color: #4c5936;
+  color: rgba(255, 255, 255, 0.8);
 }
 .wf-active .modalDialog font-family, .modalDialog .wf-active font-family, .wf-active body {
   font-family: "Roboto", sans-serif;
@@ -1443,20 +1444,20 @@ h1 {
 h1 {
   display: inline;
   background-color: rgba(0, 0, 0, 0.3);
-  color: white;
 }
 
 p, .text {
   font-size: .75em;
+  line-height: 1.45em;
 }
 
 a {
   text-decoration: none;
-  color: #90f2f8;
+  color: #bae8ef;
 }
 
 a:hover {
-  color: #d0dde0;
+  color: white;
 }
 
 img {
@@ -1559,10 +1560,10 @@ video.bee {
 
 p.sldier-text {
   font-size: .8em;
-  color: white;
+  line-height: 1.65em;
 }
 
-/* button
+/* button & more
 =============================================== */
 .button {
   background-color: #0fd5e0;
@@ -1577,7 +1578,7 @@ p.sldier-text {
 }
 
 .button:hover {
-  background-color: #d0dde0;
+  background-color: rgba(49, 57, 35, 0.3);
 }
 
 .button span {
@@ -1617,11 +1618,6 @@ p.sldier-text {
 
 .footer h1 {
   background-color: transparent;
-  color: white;
-}
-
-.footer p {
-  color: white;
 }
 
 /* media query
@@ -1632,13 +1628,15 @@ p.sldier-text {
   .cell-1 .sldier-text h1.header-title {
     font-size: 2em;
     position: absolute;
-    top: 20%;
+    top: 0;
+    margin: 0;
   }
 
   p.sldier-text {
     position: absolute;
-    top: 40%;
-    font-size: 1.2em;
+    top: 10%;
+    font-size: 1.15em;
+    line-height: 1.5em;
   }
 
   .button {
@@ -1651,10 +1649,6 @@ p.sldier-text {
 
   .footer {
     padding-right: 35px;
-  }
-
-  .footer h1 {
-    color: white;
   }
 
   .smaller-font {
@@ -1677,7 +1671,8 @@ p.sldier-text {
   }
 
   p, .text {
-    font-size: 1em;
+    font-size: .9em;
+    line-height: 1.5em;
   }
 
   .caption {

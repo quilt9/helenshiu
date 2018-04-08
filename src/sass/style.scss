@@ -29,18 +29,19 @@ $larger: 1.5em;
 /* Extend
 =============================================== */
 %gradient-body {
-	background-color: rgba($primary-dark, .5);
-	background-image: url(/img/star-bg.svg),linear-gradient(-45deg, rgba($primary-dark, .2) 30%, rgba($secondary-light, .8) 100%);
+	background-image: url(/img/star-bg.svg),linear-gradient(-45deg, rgba($primary-dark, .2) 30%, rgba($secondary-light, .8) 70%);
+  background-color: darken($primary-blue, 10%);
 	background-repeat: no-repeat;
   background-position: center 0, 0 0, 0 0;
   background-size: contain;
+  background-blend-mode: difference;
 }
 
 /* Body */
 %title-font {
   font-family: $fallback;
   font-size: $heading-size;
-  color: darken($primary-blue, 10%);
+  color: $white;
   .wf-active & {
     font-family: $heading;
   }
@@ -49,7 +50,7 @@ $larger: 1.5em;
 %body-font {
   font-family: $fallback;
   font-size: $font-size;
-  color: lighten($secondary-dark, 10%);
+  color: rgba($white, .8);
   .wf-active & {
     font-family: $font-family;
   }
@@ -70,33 +71,31 @@ h1 {
   @extend %title-font;
   display: inline;
   background-color: rgba($primary-dark, .3);
-  //margin-left: -15px;
-  //padding: 3%;
-  color: $white;
 }
 
 p, .text {
   font-size: .75em;
+  line-height: 1.45em;
 }
 
 a {
   text-decoration: none;
-  color: lighten($secondary-blue, 30%);
+  color: lighten($primary-blue, 40%);
 }
 
 a:hover {
-  color: $primary-light;
+  color: $white;
 }
 
 img {
-    width: 100%;
-    height: auto;
-    pointer-events: none;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
 }
 
 video {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .container {
@@ -180,10 +179,11 @@ video.bee {
 
 p.sldier-text {
   font-size: .8em;
-  color: $white;
+  line-height: 1.65em;
+  //color: $white;
 }
 
-/* button
+/* button & more
 =============================================== */
 .button {
   background-color: $secondary-blue;
@@ -196,7 +196,7 @@ p.sldier-text {
 }
 
 .button:hover {
-  background-color: $primary-light;
+  background-color: rgba($secondary-dark, .3);
 }
 
 .button span {
@@ -232,11 +232,10 @@ p.sldier-text {
 
 .footer h1 {
   background-color: transparent;
-  color: $white;
 }
 
 .footer p {
-  color: $white;
+  //color: $white;
 }
 
 /* media query
@@ -248,13 +247,15 @@ p.sldier-text {
   .cell-1 .sldier-text h1.header-title {
     font-size: 2em;
     position: absolute;
-    top: 20%;
+    top: 0;
+    margin: 0;
   }
 
   p.sldier-text {
     position: absolute;
-    top: 40%;
-    font-size: 1.2em;
+    top: 10%;
+    font-size: 1.15em;
+    line-height: 1.5em;
   }
 
   .button {
@@ -270,7 +271,7 @@ p.sldier-text {
   }
 
   .footer h1 {
-    color: $white;
+    //color: $white;
   }
 
   .smaller-font {
@@ -293,7 +294,8 @@ p.sldier-text {
   }
 
   p, .text {
-    font-size: 1em;
+    font-size: .9em;
+    line-height: 1.5em;
   }
 
   .caption {
